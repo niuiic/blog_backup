@@ -12,7 +12,8 @@ elif [ "$1" = "bp" ];then
 		cd ./blog_backup
 		git add .
 		git commit -m "new modification"
-		git push
+		git pull origin master
+		git push -u origin master
 elif [ "$1" = "new" ];then
 		./node_modules/hexo-cli/bin/hexo new "$2" 
 elif [ "$1" = "s" ];then
