@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://www.niuiic.top/2021/03/23/vim-fuzzy-search-plugin/</loc>
+    
+    <lastmod>2021-03-23</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://www.niuiic.top/2021/03/23/install-oracle-jdk-and-jre-on-gentoo/</loc>
     
     <lastmod>2021-03-23</lastmod>
@@ -51,13 +58,6 @@
   </url>
   
   <url>
-    <loc>https://www.niuiic.top/2021/03/23/vim-fuzzy-search-plugin/</loc>
-    
-    <lastmod>2021-03-23</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://www.niuiic.top/2021/03/23/vim-markdown-preview-plugin/</loc>
     
     <lastmod>2021-03-23</lastmod>
@@ -100,7 +100,7 @@
   </url>
   
   <url>
-    <loc>https://www.niuiic.top/about/index.html</loc>
+    <loc>https://www.niuiic.top/categories/index.html</loc>
     
     <lastmod>2021-03-23</lastmod>
     
@@ -114,14 +114,14 @@
   </url>
   
   <url>
-    <loc>https://www.niuiic.top/friends/index.html</loc>
+    <loc>https://www.niuiic.top/about/index.html</loc>
     
     <lastmod>2021-03-23</lastmod>
     
   </url>
   
   <url>
-    <loc>https://www.niuiic.top/categories/index.html</loc>
+    <loc>https://www.niuiic.top/friends/index.html</loc>
     
     <lastmod>2021-03-23</lastmod>
     

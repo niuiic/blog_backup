@@ -41,7 +41,7 @@
     <script src="/libs/jquery/jquery.min.js"></script>
 
 <meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/atom.xml" title="niuiic 's blogs" type="application/atom+xml">
-<link rel="stylesheet" href="/css/prism.css" type="text/css"></head>
+</head>
 
 
 
@@ -482,7 +482,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    542
+                    477
                 </div>
                 
 
@@ -517,42 +517,42 @@
 <p>vista.vim 显示 tags 的方式来自于 universal-ctags、ale、vim-lsp、coc.nvim、LanguageClient-neovim、vim-lsc、nvim-lspconfig 等。提取 tags 的方式来自于 fzf、skim、vim-clap 等。这就意味着该插件需要以上插件或者包的支持。这里，笔者推荐第一部分可以采用 universal-ctags、或 coc.nvim 或 ale，第二部分采用 vim-clap。</p>
 <h2 id="vista-vim-安装配置"><a href="#vista-vim-安装配置" class="headerlink" title="vista.vim 安装配置"></a>vista.vim 安装配置</h2><p>vista.vim 的安装很简单，参考其<a target="_blank" rel="noopener" href="https://github.com/liuchengxu/vista.vim">github 主页</a>即可。</p>
 <p>配置 vista.vim，可以参考我的配置。</p>
-<pre class="line-numbers language-vim" data-language="vim"><code class="language-vim">&quot; vista.vim
-function! NearestMethodOrFunction() abort
-4return get(b:, &#39;vista_nearest_method_or_function&#39;, &#39;&#39;)
-endfunction
+<pre class="line-numbers language-vim" data-language="vim"><code class="language-vim"><span class="token comment">" vista.vim</span>
+<span class="token keyword">function</span><span class="token operator">!</span> <span class="token function">NearestMethodOrFunction</span><span class="token punctuation">(</span><span class="token punctuation">)</span> abort
+	<span class="token keyword">return</span> <span class="token function">get</span><span class="token punctuation">(</span><span class="token keyword">b</span><span class="token punctuation">:</span><span class="token punctuation">,</span> <span class="token string">'vista_nearest_method_or_function'</span><span class="token punctuation">,</span> <span class="token string">''</span><span class="token punctuation">)</span>
+<span class="token keyword">endfunction</span>
 
-set statusline+&#x3D;%&#123;NearestMethodOrFunction()&#125;
+<span class="token keyword">set</span> <span class="token builtin">statusline</span><span class="token operator">+=</span><span class="token operator">%</span><span class="token punctuation">&#123;</span><span class="token function">NearestMethodOrFunction</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">&#125;</span>
 
-&quot; By default vista.vim never run if you don&#39;t call it explicitly.
-&quot;
-&quot; If you want to show the nearest function in your statusline automatically,
-&quot; you can add the following line to your vimrc
-autocmd VimEnter * call vista#RunForNearestMethodOrFunction()
-let g:vista_icon_indent &#x3D; [&quot;╰─▸ &quot;, &quot;├─▸ &quot;]
-let g:vista_default_executive &#x3D; &#39;ctags&#39;
-let g:vista_executive_for &#x3D; &#123;
-444\ &#39;cpp&#39;: &#39;coc&#39;,
-444\ &#39;php&#39;: &#39;coc&#39;,
-444\ &#125;
-let g:vista_ctags_cmd &#x3D; &#123;
-444\ &#39;haskell&#39;: &#39;hasktags -x -o - -c&#39;,
-444\ &#125;
-let g:vista_fzf_preview &#x3D; [&#39;right:50%&#39;]
-let g:vista#renderer#enable_icon &#x3D; 1
-let g:vista#renderer#icons &#x3D; &#123;
-444\   &quot;function&quot;: &quot;\uf794&quot;,
-444\   &quot;variable&quot;: &quot;\uf71b&quot;,
-444\  &#125;
-nnoremap &lt;silent&gt;&lt;nowait&gt; &lt;space&gt;m :&lt;C-u&gt;Vista!!&lt;cr&gt;
-let g:which_key_map1.m &#x3D; &#39;open the file tagbar&#39;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<span class="token comment">" By default vista.vim never run if you don't call it explicitly.</span>
+<span class="token comment">"</span>
+<span class="token comment">" If you want to show the nearest function in your statusline automatically,</span>
+<span class="token comment">" you can add the following line to your vimrc</span>
+<span class="token builtin">autocmd</span> VimEnter <span class="token operator">*</span> <span class="token keyword">call</span> vista#<span class="token function">RunForNearestMethodOrFunction</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token keyword">let</span> g<span class="token punctuation">:</span>vista_icon_indent <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">"╰─▸ "</span><span class="token punctuation">,</span> <span class="token string">"├─▸ "</span><span class="token punctuation">]</span>
+<span class="token keyword">let</span> g<span class="token punctuation">:</span>vista_default_executive <span class="token operator">=</span> <span class="token string">'ctags'</span>
+<span class="token keyword">let</span> g<span class="token punctuation">:</span>vista_executive_for <span class="token operator">=</span> <span class="token punctuation">&#123;</span>
+			\ <span class="token string">'cpp'</span><span class="token punctuation">:</span> <span class="token string">'coc'</span><span class="token punctuation">,</span>
+			\ <span class="token string">'php'</span><span class="token punctuation">:</span> <span class="token string">'coc'</span><span class="token punctuation">,</span>
+			\ <span class="token punctuation">&#125;</span>
+<span class="token keyword">let</span> g<span class="token punctuation">:</span>vista_ctags_cmd <span class="token operator">=</span> <span class="token punctuation">&#123;</span>
+			\ <span class="token string">'haskell'</span><span class="token punctuation">:</span> <span class="token string">'hasktags -x -o - -c'</span><span class="token punctuation">,</span>
+			\ <span class="token punctuation">&#125;</span>
+<span class="token keyword">let</span> g<span class="token punctuation">:</span>vista_fzf_preview <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">'right:50%'</span><span class="token punctuation">]</span>
+<span class="token keyword">let</span> g<span class="token punctuation">:</span>vista#renderer#enable_icon <span class="token operator">=</span> <span class="token number">1</span>
+<span class="token keyword">let</span> g<span class="token punctuation">:</span>vista#renderer#icons <span class="token operator">=</span> <span class="token punctuation">&#123;</span>
+			\   <span class="token string">"function"</span><span class="token punctuation">:</span> <span class="token string">"\uf794"</span><span class="token punctuation">,</span>
+			\   <span class="token string">"variable"</span><span class="token punctuation">:</span> <span class="token string">"\uf71b"</span><span class="token punctuation">,</span>
+			\  <span class="token punctuation">&#125;</span>
+nnoremap <span class="token operator">&lt;</span><span class="token keyword">silent</span><span class="token operator">></span><span class="token operator">&lt;</span>nowait<span class="token operator">></span> <span class="token operator">&lt;</span>space<span class="token operator">></span><span class="token keyword">m</span> <span class="token punctuation">:</span><span class="token operator">&lt;</span>C<span class="token operator">-</span><span class="token keyword">u</span><span class="token operator">></span>Vista<span class="token operator">!</span><span class="token operator">!</span><span class="token operator">&lt;</span><span class="token keyword">cr</span><span class="token operator">></span>
+<span class="token keyword">let</span> g<span class="token punctuation">:</span>which_key_map1<span class="token operator">.</span><span class="token keyword">m</span> <span class="token operator">=</span> <span class="token string">'open the file tagbar'</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p>其中需要注意的有以下几行</p>
 <pre class="line-numbers language-none"><code class="language-none">let g:vista_default_executive &#x3D; &#39;ctags&#39;
 let g:vista_executive_for &#x3D; &#123;
-444\ &#39;cpp&#39;: &#39;coc&#39;,
-444\ &#39;php&#39;: &#39;coc&#39;,
-444\ &#125;
+			\ &#39;cpp&#39;: &#39;coc&#39;,
+			\ &#39;php&#39;: &#39;coc&#39;,
+			\ &#125;
 nnoremap &lt;silent&gt;&lt;nowait&gt; &lt;space&gt;m :&lt;C-u&gt;Vista!!&lt;cr&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p>第一行表示使用的默认显示 tags 工具，其实指的是提取 tags 的工具。不同工具的显示方式不同。笔者在这里使用的是<code>universal-ctags</code>，因此设置为 ctags。其余可选项可以参考其 github 主页。</p>
@@ -1209,7 +1209,7 @@ nnoremap &lt;silent&gt;&lt;nowait&gt; &lt;space&gt;m :&lt;C-u&gt;Vista!!&lt;cr&g
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">30.8k</span>&nbsp;字
+                class="white-color">29.2k</span>&nbsp;字
             
             
             

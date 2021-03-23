@@ -41,7 +41,7 @@
     <script src="/libs/jquery/jquery.min.js"></script>
 
 <meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/atom.xml" title="niuiic 's blogs" type="application/atom+xml">
-<link rel="stylesheet" href="/css/prism.css" type="text/css"></head>
+</head>
 
 
 
@@ -592,14 +592,14 @@ set signcolumn&#x3D;yes
 &quot; NOTE: Use command &#39;:verbose imap &lt;tab&gt;&#39; to make sure tab is not mapped by
 &quot; other plugin before putting this into your config.
 inoremap &lt;silent&gt;&lt;expr&gt; &lt;TAB&gt;
-444\ pumvisible() ? &quot;\&lt;C-n&gt;&quot; :
-444\ &lt;SID&gt;check_back_space() ? &quot;\&lt;TAB&gt;&quot; :
-444\ coc#refresh()
+			\ pumvisible() ? &quot;\&lt;C-n&gt;&quot; :
+			\ &lt;SID&gt;check_back_space() ? &quot;\&lt;TAB&gt;&quot; :
+			\ coc#refresh()
 inoremap &lt;expr&gt;&lt;S-TAB&gt; pumvisible() ? &quot;\&lt;C-p&gt;&quot; : &quot;\&lt;C-h&gt;&quot;
 
 function! s:check_back_space() abort
-4let col &#x3D; col(&#39;.&#39;) - 1
-4return !col || getline(&#39;.&#39;)[col - 1]  &#x3D;~# &#39;\s&#39;
+	let col &#x3D; col(&#39;.&#39;) - 1
+	return !col || getline(&#39;.&#39;)[col - 1]  &#x3D;~# &#39;\s&#39;
 endfunction
 
 &quot; Use &lt;c-space&gt; to trigger completion.
@@ -609,9 +609,9 @@ inoremap &lt;silent&gt;&lt;expr&gt; &lt;c-space&gt; coc#refresh()
 &quot; position. Coc only does snippet and additional edit on confirm.
 &quot; &lt;cr&gt; could be remapped by other vim plugin, try &#96;:verbose imap &lt;CR&gt;&#96;.
 if exists(&#39;*complete_info&#39;)
-4inoremap &lt;expr&gt; &lt;cr&gt; complete_info()[&quot;selected&quot;] !&#x3D; &quot;-1&quot; ? &quot;\&lt;C-y&gt;&quot; : &quot;\&lt;C-g&gt;u\&lt;CR&gt;&quot;
+	inoremap &lt;expr&gt; &lt;cr&gt; complete_info()[&quot;selected&quot;] !&#x3D; &quot;-1&quot; ? &quot;\&lt;C-y&gt;&quot; : &quot;\&lt;C-g&gt;u\&lt;CR&gt;&quot;
 else
-4inoremap &lt;expr&gt; &lt;cr&gt; pumvisible() ? &quot;\&lt;C-y&gt;&quot; : &quot;\&lt;C-g&gt;u\&lt;CR&gt;&quot;
+	inoremap &lt;expr&gt; &lt;cr&gt; pumvisible() ? &quot;\&lt;C-y&gt;&quot; : &quot;\&lt;C-g&gt;u\&lt;CR&gt;&quot;
 endif
 
 &quot; Use &#96;[g&#96; and &#96;]g&#96; to navigate diagnostics
@@ -628,11 +628,11 @@ nmap &lt;silent&gt; gr &lt;Plug&gt;(coc-references)
 nnoremap &lt;silent&gt; K :call &lt;SID&gt;show_documentation()&lt;CR&gt;
 
 function! s:show_documentation()
-4if (index([&#39;vim&#39;,&#39;help&#39;], &amp;filetype) &gt;&#x3D; 0)
-44execute &#39;h &#39;.expand(&#39;&lt;cword&gt;&#39;)
-4else
-44call CocAction(&#39;doHover&#39;)
-4endif
+	if (index([&#39;vim&#39;,&#39;help&#39;], &amp;filetype) &gt;&#x3D; 0)
+		execute &#39;h &#39;.expand(&#39;&lt;cword&gt;&#39;)
+	else
+		call CocAction(&#39;doHover&#39;)
+	endif
 endfunction
 
 &quot; Highlight the symbol and its references when holding the cursor.
@@ -646,11 +646,11 @@ xmap &lt;leader&gt;f  &lt;Plug&gt;(coc-format-selected)
 nmap &lt;leader&gt;f  &lt;Plug&gt;(coc-format-selected)
 
 augroup mygroup
-4autocmd!
-4&quot; Setup formatexpr specified filetype(s).
-4autocmd FileType typescript,json setl formatexpr&#x3D;CocAction(&#39;formatSelected&#39;)
-4&quot; Update signature help on jump placeholder.
-4autocmd User CocJumpPlaceholder call CocActionAsync(&#39;showSignatureHelp&#39;)
+	autocmd!
+	&quot; Setup formatexpr specified filetype(s).
+	autocmd FileType typescript,json setl formatexpr&#x3D;CocAction(&#39;formatSelected&#39;)
+	&quot; Update signature help on jump placeholder.
+	autocmd User CocJumpPlaceholder call CocActionAsync(&#39;showSignatureHelp&#39;)
 augroup end
 
 &quot; Applying codeAction to the selected region.
@@ -788,15 +788,15 @@ inoremap &lt;C-c&gt; &lt;esc&gt;<span aria-hidden="true" class="line-numbers-row
 <h2 id="markdown"><a href="#markdown" class="headerlink" title="markdown"></a>markdown</h2><p>markdown 的部分上面已经完成的差不多了，现在先创建一个.md 文件，查看是否可以补全，<code>nvim test.md</code>，输入<code>img</code>，应该会有提示，如果没有，请检查<code>coc.nvim</code>以及两个关于<code>snippets</code>的插件</p>
 <p>目前还有一个至关重要的问题，markdown 中的 latex 无法补全，极其影响体验感，不过<code>coc.nvim</code>可以<a target="_blank" rel="noopener" href="https://github.com/neoclide/coc.nvim/wiki/Create-custom-source">自定义 sources</a>，在<code>~/.config/nvim/autoload/coc/source</code>下创建<code>latex.vim</code>，写入</p>
 <pre class="line-numbers language-none"><code class="language-none">function! coc#source#latex#init() abort
-4return &#123;
-4444\ &#39;triggerCharacters&#39;: [&#39;\&#39;],
-4444\&#39;filetype&#39;:[&#39;markdown&#39;]
-4444\&#125;
+	return &#123;
+				\ &#39;triggerCharacters&#39;: [&#39;\&#39;],
+				\&#39;filetype&#39;:[&#39;markdown&#39;]
+				\&#125;
 endfunction
 
 function! coc#source#latex#complete(opt, cb) abort
-4let items &#x3D; [&#39;dot&#123;&#125;&#39;, &#39;ddot&#123;&#125;&#39;, &#39;bar&#123;&#125;&#39;, &#39;hat&#123;&#125;&#39;, &#39;exp&#39;, &#39;sin&#39;, &#39;cos&#39;, &#39;tan&#39;, &#39;sec&#39;, &#39;csc&#39;, &#39;vec&#123;&#125;&#39;, &#39;cot&#39;, &#39;arcsin&#39;, &#39;arccos&#39;, &#39;arctan&#39;, &#39;sinh&#39;, &#39;cosh&#39;, &#39;tanh&#39;, &#39;coth&#39;, &#39;sh&#39;, &#39;ch&#39;, &#39;th&#39;, &#39;max&#39;, &#39;min&#39;, &#39;partial&#39;, &#39;nabla&#39;, &#39;prime&#39;, &#39;backprime&#39;, &#39;infty&#39;, &#39;eth&#39;, &#39;hbar&#39;, &#39;sqrt&#123;&#125;&#39;, &#39;sqrt[]&#123;&#125;&#39;, &#39;pm&#39;, &#39;mp&#39;, &#39;times&#39;, &#39;div&#39;, &#39;cdot&#39;, &#39;odot&#39;, &#39;bigodot&#39; , &#39;&#123; \&#125;&#39;, &#39;in&#39;, &#39;not&#39;, &#39;ni&#39;, &#39;cap&#39;, &#39;Cap&#39;, &#39;bigcap&#39;, &#39;cup&#39;, &#39;Cup&#39;, &#39;bigcup&#39;, &#39;subset&#39;, &#39;supset&#39;, &#39;supseteq&#39;, &#39;subseteq&#39;, &#39;subseteqq&#39;, &#39;supseteqq&#39;, &#39;subsetneq&#39;, &#39;supsetneq&#39;, &#39;supsetneqq&#39;, &#39;subsetneqq&#39;, &#39;sim&#39;, &#39;approx&#39;, &#39;leq&#39;, &#39;geq&#39;, &#39;parallel&#39;, &#39;nparallel&#39;, &#39;perp&#39;, &#39;angle&#39;, &#39;Box&#39;, &#39;bigtriangleup&#39;, &#39;bigtriangledown&#39;, &#39;forall&#39;, &#39;therefore&#39;, &#39;because&#39;, &#39;overline&#123;&#125;&#39;, &#39;Rightarrow&#39;, &#39;Leftarrow&#39;, &#39;rightarrow&#39;, &#39;leftarrow&#39;, &#39;leftrightarrow&#39;, &#39;nRightarrow&#39;, &#39;nLeftarrow&#39;, &#39;nleftarrow&#39;, &#39;nrightarrow&#39;, &#39;nleftrightarrow&#39;, &#39;overleftarrow&#123;&#125;&#39;, &#39;overrightarrow&#123;&#125;&#39;, &#39;overset&#123;&#125;&#39;, &#39;underline&#123;&#125;&#39;, &#39;sum&#39;, &#39;prod&#39;, &#39;lim&#39;, &#39;limits&#39;, &#39;int&#39;, &#39;iint&#39;, &#39;oint&#39;, &#39;iiint&#39;, &#39;frac&#123;&#125;&#123;&#125;&#39;, &#39;tfrac&#123;&#125;&#123;&#125;&#39;, &#39;dfrac&#123;&#125;&#123;&#125;&#39;, &#39;\begin&#123;matrix&#125;\end&#123;matrix&#125;&#39;, &#39;\begin&#123;vmatrix&#125;\end&#123;vmatrix&#125;&#39;, &#39;\begin&#123;bmatrix&#125;\end&#123;bmatrix&#125;&#39;, &#39;\begin&#123;Bmatrix&#125;\end&#123;Bmatrix&#125;&#39;, &#39;\begin&#123;pmatrix&#125;\end&#123;pmatrix&#125;&#39;,&#39;\begin&#123;cases&#125;\end&#123;cases&#125;&#39;, &#39;\begin&#123;aligned&#125;\end&#123;aligned&#125;&#39;, &#39;\begin&#123;array&#125;\end&#123;array&#125;&#39;, &#39;alpha&#39;, &#39;psi&#39;, &#39;Delta&#39;, &#39;delta&#39;, &#39;beta&#39;, &#39;lambda&#39;, &#39;rho&#39;, &#39;varepsilon&#39;, &#39;Gamma&#39;, &#39;chi&#39;, &#39;mu&#39;, &#39;sigma&#39;, &#39;Lambda&#39;, &#39;tau&#39;, &#39;varphi&#39;, &#39;varPhi&#39;, &#39;phi&#39;, &#39;Phi&#39;, &#39;eta&#39;, &#39;omega&#39;, &#39;varrho&#39;, &#39;Pi&#39;, &#39;pi&#39;, &#39;gamma&#39;, &#39;xi&#39;, &#39;Psi&#39;, &#39;Sigma&#39;, &#39;varnothing&#39;, &#39;iiiint&#39;]
-4call a:cb(items)
+	let items &#x3D; [&#39;dot&#123;&#125;&#39;, &#39;ddot&#123;&#125;&#39;, &#39;bar&#123;&#125;&#39;, &#39;hat&#123;&#125;&#39;, &#39;exp&#39;, &#39;sin&#39;, &#39;cos&#39;, &#39;tan&#39;, &#39;sec&#39;, &#39;csc&#39;, &#39;vec&#123;&#125;&#39;, &#39;cot&#39;, &#39;arcsin&#39;, &#39;arccos&#39;, &#39;arctan&#39;, &#39;sinh&#39;, &#39;cosh&#39;, &#39;tanh&#39;, &#39;coth&#39;, &#39;sh&#39;, &#39;ch&#39;, &#39;th&#39;, &#39;max&#39;, &#39;min&#39;, &#39;partial&#39;, &#39;nabla&#39;, &#39;prime&#39;, &#39;backprime&#39;, &#39;infty&#39;, &#39;eth&#39;, &#39;hbar&#39;, &#39;sqrt&#123;&#125;&#39;, &#39;sqrt[]&#123;&#125;&#39;, &#39;pm&#39;, &#39;mp&#39;, &#39;times&#39;, &#39;div&#39;, &#39;cdot&#39;, &#39;odot&#39;, &#39;bigodot&#39; , &#39;&#123; \&#125;&#39;, &#39;in&#39;, &#39;not&#39;, &#39;ni&#39;, &#39;cap&#39;, &#39;Cap&#39;, &#39;bigcap&#39;, &#39;cup&#39;, &#39;Cup&#39;, &#39;bigcup&#39;, &#39;subset&#39;, &#39;supset&#39;, &#39;supseteq&#39;, &#39;subseteq&#39;, &#39;subseteqq&#39;, &#39;supseteqq&#39;, &#39;subsetneq&#39;, &#39;supsetneq&#39;, &#39;supsetneqq&#39;, &#39;subsetneqq&#39;, &#39;sim&#39;, &#39;approx&#39;, &#39;leq&#39;, &#39;geq&#39;, &#39;parallel&#39;, &#39;nparallel&#39;, &#39;perp&#39;, &#39;angle&#39;, &#39;Box&#39;, &#39;bigtriangleup&#39;, &#39;bigtriangledown&#39;, &#39;forall&#39;, &#39;therefore&#39;, &#39;because&#39;, &#39;overline&#123;&#125;&#39;, &#39;Rightarrow&#39;, &#39;Leftarrow&#39;, &#39;rightarrow&#39;, &#39;leftarrow&#39;, &#39;leftrightarrow&#39;, &#39;nRightarrow&#39;, &#39;nLeftarrow&#39;, &#39;nleftarrow&#39;, &#39;nrightarrow&#39;, &#39;nleftrightarrow&#39;, &#39;overleftarrow&#123;&#125;&#39;, &#39;overrightarrow&#123;&#125;&#39;, &#39;overset&#123;&#125;&#39;, &#39;underline&#123;&#125;&#39;, &#39;sum&#39;, &#39;prod&#39;, &#39;lim&#39;, &#39;limits&#39;, &#39;int&#39;, &#39;iint&#39;, &#39;oint&#39;, &#39;iiint&#39;, &#39;frac&#123;&#125;&#123;&#125;&#39;, &#39;tfrac&#123;&#125;&#123;&#125;&#39;, &#39;dfrac&#123;&#125;&#123;&#125;&#39;, &#39;\begin&#123;matrix&#125;\end&#123;matrix&#125;&#39;, &#39;\begin&#123;vmatrix&#125;\end&#123;vmatrix&#125;&#39;, &#39;\begin&#123;bmatrix&#125;\end&#123;bmatrix&#125;&#39;, &#39;\begin&#123;Bmatrix&#125;\end&#123;Bmatrix&#125;&#39;, &#39;\begin&#123;pmatrix&#125;\end&#123;pmatrix&#125;&#39;,&#39;\begin&#123;cases&#125;\end&#123;cases&#125;&#39;, &#39;\begin&#123;aligned&#125;\end&#123;aligned&#125;&#39;, &#39;\begin&#123;array&#125;\end&#123;array&#125;&#39;, &#39;alpha&#39;, &#39;psi&#39;, &#39;Delta&#39;, &#39;delta&#39;, &#39;beta&#39;, &#39;lambda&#39;, &#39;rho&#39;, &#39;varepsilon&#39;, &#39;Gamma&#39;, &#39;chi&#39;, &#39;mu&#39;, &#39;sigma&#39;, &#39;Lambda&#39;, &#39;tau&#39;, &#39;varphi&#39;, &#39;varPhi&#39;, &#39;phi&#39;, &#39;Phi&#39;, &#39;eta&#39;, &#39;omega&#39;, &#39;varrho&#39;, &#39;Pi&#39;, &#39;pi&#39;, &#39;gamma&#39;, &#39;xi&#39;, &#39;Psi&#39;, &#39;Sigma&#39;, &#39;varnothing&#39;, &#39;iiiint&#39;]
+	call a:cb(items)
 endfunction<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p>关于自定义 source 的具体细节，请前往 github，上面给出的 source 设定在 markdown 文件下加载，使用<code>\</code>作为触发符，这里只加入了我常用的几个命令，更多内容可以自行添加</p>
@@ -1532,7 +1532,7 @@ autocmd FileType markdown nnoremap &lt;buffer&gt; &lt;C-l&gt; :Prettier&lt;CR&gt
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">30.8k</span>&nbsp;字
+                class="white-color">29.2k</span>&nbsp;字
             
             
             

@@ -41,7 +41,7 @@
     <script src="/libs/jquery/jquery.min.js"></script>
 
 <meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/atom.xml" title="niuiic 's blogs" type="application/atom+xml">
-<link rel="stylesheet" href="/css/prism.css" type="text/css"></head>
+</head>
 
 
 
@@ -482,7 +482,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    340
+                    283
                 </div>
                 
 
@@ -516,41 +516,41 @@
 <h2 id="coc-explorer"><a href="#coc-explorer" class="headerlink" title="coc-explorer"></a>coc-explorer</h2><p>coc-explorer 是一个 coc 插件。运行于 coc.nvim 提供的插件平台上。相比于nerdtree，不说性能问题，直观上就将提供更多的文件信息以及更流畅的体验。同时也可以配置icons。</p>
 <p>关于coc-explorer的效果图及具体配置，请见其<a target="_blank" rel="noopener" href="https://github.com/weirongxu/coc-explorer">github主页</a>。</p>
 <p>嫌麻烦的话，直接<code>CocInstall coc-explorer</code>。再设置一下快捷键等就可以直接使用了。以下附上我的配置。</p>
-<pre class="line-numbers language-vim" data-language="vim"><code class="language-vim">&quot; coc-explorer
-nnoremap &lt;leader&gt;p :CocCommand explorer&lt;CR&gt;
-let which_key_map2.p &#x3D;&#39;file tree&#39;
-function! s:coc_list_current_dir(args)
-4let node_info &#x3D; CocAction(&#39;runCommand&#39;, &#39;explorer.getNodeInfo&#39;, 0)
-4execute &#39;cd &#39; . fnamemodify(node_info[&#39;fullpath&#39;], &#39;:h&#39;)
-4execute &#39;CocList &#39; . a:args
-endfunction
+<pre class="line-numbers language-vim" data-language="vim"><code class="language-vim"><span class="token comment">" coc-explorer</span>
+nnoremap <span class="token operator">&lt;</span>leader<span class="token operator">></span><span class="token keyword">p</span> <span class="token punctuation">:</span>CocCommand explorer<span class="token operator">&lt;</span>CR<span class="token operator">></span>
+<span class="token keyword">let</span> which_key_map2<span class="token operator">.</span><span class="token keyword">p</span> <span class="token operator">=</span><span class="token string">'file tree'</span>
+<span class="token keyword">function</span><span class="token operator">!</span> s<span class="token punctuation">:</span><span class="token function">coc_list_current_dir</span><span class="token punctuation">(</span><span class="token keyword">args</span><span class="token punctuation">)</span>
+	<span class="token keyword">let</span> node_info <span class="token operator">=</span> <span class="token function">CocAction</span><span class="token punctuation">(</span><span class="token string">'runCommand'</span><span class="token punctuation">,</span> <span class="token string">'explorer.getNodeInfo'</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">)</span>
+	execute <span class="token string">'cd '</span> <span class="token operator">.</span> <span class="token function">fnamemodify</span><span class="token punctuation">(</span>node_info<span class="token punctuation">[</span><span class="token string">'fullpath'</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token string">':h'</span><span class="token punctuation">)</span>
+	execute <span class="token string">'CocList '</span> <span class="token operator">.</span> a<span class="token punctuation">:</span><span class="token keyword">args</span>
+<span class="token keyword">endfunction</span>
 
-function! s:init_explorer(bufnr)
-4call setbufvar(a:bufnr, &#39;&amp;winblend&#39;, 50)
-endfunction
+<span class="token keyword">function</span><span class="token operator">!</span> s<span class="token punctuation">:</span><span class="token function">init_explorer</span><span class="token punctuation">(</span>bufnr<span class="token punctuation">)</span>
+	<span class="token keyword">call</span> <span class="token function">setbufvar</span><span class="token punctuation">(</span>a<span class="token punctuation">:</span>bufnr<span class="token punctuation">,</span> <span class="token string">'&amp;winblend'</span><span class="token punctuation">,</span> <span class="token number">50</span><span class="token punctuation">)</span>
+<span class="token keyword">endfunction</span>
 
-function! s:enter_explorer()
-4if !exists(&#39;b:has_enter_coc_explorer&#39;) &amp;&amp; &amp;filetype &#x3D;&#x3D; &#39;coc-explorer&#39;
-44&quot; more mappings
-44nmap &lt;buffer&gt; &lt;Leader&gt;fg :call &lt;SID&gt;coc_list_current_dir(&#39;-I grep&#39;)&lt;CR&gt;
-44nmap &lt;buffer&gt; &lt;Leader&gt;fG :call &lt;SID&gt;coc_list_current_dir(&#39;-I grep -regex&#39;)&lt;CR&gt;
-44nmap &lt;buffer&gt; &lt;C-p&gt; :call &lt;SID&gt;coc_list_current_dir(&#39;files&#39;)&lt;CR&gt;
-44let b:has_enter_coc_explorer &#x3D; v:true
-4endif
-4&quot; statusline
-4setl statusline&#x3D;coc-explorer
-endfunction
+<span class="token keyword">function</span><span class="token operator">!</span> s<span class="token punctuation">:</span><span class="token function">enter_explorer</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+	<span class="token keyword">if</span> <span class="token operator">!</span><span class="token function">exists</span><span class="token punctuation">(</span><span class="token string">'b:has_enter_coc_explorer'</span><span class="token punctuation">)</span> <span class="token operator">&amp;&amp;</span> &amp;<span class="token keyword">filetype</span> <span class="token operator">==</span> <span class="token string">'coc-explorer'</span>
+		<span class="token comment">" more mappings</span>
+		nmap <span class="token operator">&lt;</span><span class="token keyword">buffer</span><span class="token operator">></span> <span class="token operator">&lt;</span>Leader<span class="token operator">></span>fg <span class="token punctuation">:</span><span class="token keyword">call</span> <span class="token operator">&lt;</span>SID<span class="token operator">></span><span class="token function">coc_list_current_dir</span><span class="token punctuation">(</span><span class="token string">'-I grep'</span><span class="token punctuation">)</span><span class="token operator">&lt;</span>CR<span class="token operator">></span>
+		nmap <span class="token operator">&lt;</span><span class="token keyword">buffer</span><span class="token operator">></span> <span class="token operator">&lt;</span>Leader<span class="token operator">></span>fG <span class="token punctuation">:</span><span class="token keyword">call</span> <span class="token operator">&lt;</span>SID<span class="token operator">></span><span class="token function">coc_list_current_dir</span><span class="token punctuation">(</span><span class="token string">'-I grep -regex'</span><span class="token punctuation">)</span><span class="token operator">&lt;</span>CR<span class="token operator">></span>
+		nmap <span class="token operator">&lt;</span><span class="token keyword">buffer</span><span class="token operator">></span> <span class="token operator">&lt;</span>C<span class="token operator">-</span><span class="token keyword">p</span><span class="token operator">></span> <span class="token punctuation">:</span><span class="token keyword">call</span> <span class="token operator">&lt;</span>SID<span class="token operator">></span><span class="token function">coc_list_current_dir</span><span class="token punctuation">(</span><span class="token string">'files'</span><span class="token punctuation">)</span><span class="token operator">&lt;</span>CR<span class="token operator">></span>
+		<span class="token keyword">let</span> <span class="token keyword">b</span><span class="token punctuation">:</span>has_enter_coc_explorer <span class="token operator">=</span> v<span class="token punctuation">:</span>true
+	<span class="token keyword">endif</span>
+	<span class="token comment">" statusline</span>
+	<span class="token keyword">setl</span> <span class="token builtin">statusline</span><span class="token operator">=</span>coc<span class="token operator">-</span>explorer
+<span class="token keyword">endfunction</span>
 
 augroup CocExplorerCustom
-4autocmd!
-4autocmd BufEnter call &lt;SID&gt;enter_explorer()
+	<span class="token builtin">autocmd</span><span class="token operator">!</span>
+	<span class="token builtin">autocmd</span> BufEnter <span class="token keyword">call</span> <span class="token operator">&lt;</span>SID<span class="token operator">></span><span class="token function">enter_explorer</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
 augroup END
 
-&quot; hook for explorer window initialized
-function! CocExplorerInited(filetype, bufnr)
-4&quot; transparent
-4call setbufvar(a:bufnr, &#39;&amp;winblend&#39;, 10)
-endfunction<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<span class="token comment">" hook for explorer window initialized</span>
+<span class="token keyword">function</span><span class="token operator">!</span> <span class="token function">CocExplorerInited</span><span class="token punctuation">(</span><span class="token keyword">filetype</span><span class="token punctuation">,</span> bufnr<span class="token punctuation">)</span>
+	<span class="token comment">" transparent</span>
+	<span class="token keyword">call</span> <span class="token function">setbufvar</span><span class="token punctuation">(</span>a<span class="token punctuation">:</span>bufnr<span class="token punctuation">,</span> <span class="token string">'&amp;winblend'</span><span class="token punctuation">,</span> <span class="token number">10</span><span class="token punctuation">)</span>
+<span class="token keyword">endfunction</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
                 
             </div>
@@ -1202,7 +1202,7 @@ endfunction<span aria-hidden="true" class="line-numbers-rows"><span></span><span
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">30.8k</span>&nbsp;字
+                class="white-color">29.2k</span>&nbsp;字
             
             
             

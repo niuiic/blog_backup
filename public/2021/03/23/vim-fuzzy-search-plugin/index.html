@@ -41,7 +41,7 @@
     <script src="/libs/jquery/jquery.min.js"></script>
 
 <meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/atom.xml" title="niuiic 's blogs" type="application/atom+xml">
-<link rel="stylesheet" href="/css/prism.css" type="text/css"></head>
+</head>
 
 
 
@@ -482,14 +482,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    886
+                    757
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    4 分
+                    3 分
                 </div>
                 
 
@@ -523,35 +523,35 @@
 <h3 id="vim-clap-配置"><a href="#vim-clap-配置" class="headerlink" title="vim-clap 配置"></a>vim-clap 配置</h3><p>该插件的默认配置已经很完善，你完全可以直接使用。</p>
 <p>该插件的默认快捷键在官方文档中有介绍。其命令也很简单，只需要<code>:Clap xxx</code>，<code>xxx</code>表示你想要搜索的内容。可选的内容在文档中也已经列出。</p>
 <p>最后给出笔者的快捷键配置方案，仅供参考。</p>
-<pre class="line-numbers language-vim" data-language="vim"><code class="language-vim">&quot; vim-clap
-nnoremap &lt;silent&gt;&lt;nowait&gt; &lt;space&gt;op  :&lt;C-u&gt;Clap&lt;CR&gt;
-nnoremap &lt;silent&gt;&lt;nowait&gt; &lt;space&gt;ob  :&lt;C-u&gt;Clap buffers&lt;CR&gt;
-nnoremap &lt;silent&gt;&lt;nowait&gt; &lt;space&gt;oc  :&lt;C-u&gt;Clap command&lt;CR&gt;
-nnoremap &lt;silent&gt;&lt;nowait&gt; &lt;space&gt;oh  :&lt;C-u&gt;Clap history&lt;CR&gt;
-nnoremap &lt;silent&gt;&lt;nowait&gt; &lt;space&gt;of  :&lt;C-u&gt;Clap files ++finder&#x3D;rg --ignore --hidden --files&lt;CR&gt;
-nnoremap &lt;silent&gt;&lt;nowait&gt; &lt;space&gt;oq  :&lt;C-u&gt;Clap quickfix&lt;CR&gt;
-nnoremap &lt;silent&gt;&lt;nowait&gt; &lt;space&gt;oj  :&lt;C-u&gt;Clap jumps&lt;CR&gt;
-nnoremap &lt;silent&gt;&lt;nowait&gt; &lt;space&gt;om  :&lt;C-u&gt;Clap marks&lt;CR&gt;
-nnoremap &lt;silent&gt;&lt;nowait&gt; &lt;space&gt;ow  :&lt;C-u&gt;Clap windows&lt;CR&gt;
-nnoremap &lt;silent&gt;&lt;nowait&gt; &lt;space&gt;ot  :&lt;C-u&gt;Clap tags&lt;CR&gt;
-nnoremap &lt;silent&gt;&lt;nowait&gt; &lt;space&gt;os  :&lt;C-u&gt;Clap colors&lt;CR&gt;
-nnoremap &lt;silent&gt;&lt;nowait&gt; &lt;space&gt;og :&lt;C-u&gt;Clap grep2&lt;CR&gt;
+<pre class="line-numbers language-vim" data-language="vim"><code class="language-vim"><span class="token comment">" vim-clap</span>
+nnoremap <span class="token operator">&lt;</span><span class="token keyword">silent</span><span class="token operator">></span><span class="token operator">&lt;</span>nowait<span class="token operator">></span> <span class="token operator">&lt;</span>space<span class="token operator">></span>op  <span class="token punctuation">:</span><span class="token operator">&lt;</span>C<span class="token operator">-</span><span class="token keyword">u</span><span class="token operator">></span>Clap<span class="token operator">&lt;</span>CR<span class="token operator">></span>
+nnoremap <span class="token operator">&lt;</span><span class="token keyword">silent</span><span class="token operator">></span><span class="token operator">&lt;</span>nowait<span class="token operator">></span> <span class="token operator">&lt;</span>space<span class="token operator">></span>ob  <span class="token punctuation">:</span><span class="token operator">&lt;</span>C<span class="token operator">-</span><span class="token keyword">u</span><span class="token operator">></span>Clap <span class="token keyword">buffers</span><span class="token operator">&lt;</span>CR<span class="token operator">></span>
+nnoremap <span class="token operator">&lt;</span><span class="token keyword">silent</span><span class="token operator">></span><span class="token operator">&lt;</span>nowait<span class="token operator">></span> <span class="token operator">&lt;</span>space<span class="token operator">></span>oc  <span class="token punctuation">:</span><span class="token operator">&lt;</span>C<span class="token operator">-</span><span class="token keyword">u</span><span class="token operator">></span>Clap command<span class="token operator">&lt;</span>CR<span class="token operator">></span>
+nnoremap <span class="token operator">&lt;</span><span class="token keyword">silent</span><span class="token operator">></span><span class="token operator">&lt;</span>nowait<span class="token operator">></span> <span class="token operator">&lt;</span>space<span class="token operator">></span>oh  <span class="token punctuation">:</span><span class="token operator">&lt;</span>C<span class="token operator">-</span><span class="token keyword">u</span><span class="token operator">></span>Clap <span class="token keyword">history</span><span class="token operator">&lt;</span>CR<span class="token operator">></span>
+nnoremap <span class="token operator">&lt;</span><span class="token keyword">silent</span><span class="token operator">></span><span class="token operator">&lt;</span>nowait<span class="token operator">></span> <span class="token operator">&lt;</span>space<span class="token operator">></span>of  <span class="token punctuation">:</span><span class="token operator">&lt;</span>C<span class="token operator">-</span><span class="token keyword">u</span><span class="token operator">></span>Clap <span class="token keyword">files</span> <span class="token operator">+</span><span class="token operator">+</span>finder<span class="token operator">=</span>rg <span class="token operator">-</span><span class="token operator">-</span>ignore <span class="token operator">-</span><span class="token operator">-</span><span class="token builtin">hidden</span> <span class="token operator">-</span><span class="token operator">-</span><span class="token keyword">files</span><span class="token operator">&lt;</span>CR<span class="token operator">></span>
+nnoremap <span class="token operator">&lt;</span><span class="token keyword">silent</span><span class="token operator">></span><span class="token operator">&lt;</span>nowait<span class="token operator">></span> <span class="token operator">&lt;</span>space<span class="token operator">></span>oq  <span class="token punctuation">:</span><span class="token operator">&lt;</span>C<span class="token operator">-</span><span class="token keyword">u</span><span class="token operator">></span>Clap quickfix<span class="token operator">&lt;</span>CR<span class="token operator">></span>
+nnoremap <span class="token operator">&lt;</span><span class="token keyword">silent</span><span class="token operator">></span><span class="token operator">&lt;</span>nowait<span class="token operator">></span> <span class="token operator">&lt;</span>space<span class="token operator">></span>oj  <span class="token punctuation">:</span><span class="token operator">&lt;</span>C<span class="token operator">-</span><span class="token keyword">u</span><span class="token operator">></span>Clap <span class="token keyword">jumps</span><span class="token operator">&lt;</span>CR<span class="token operator">></span>
+nnoremap <span class="token operator">&lt;</span><span class="token keyword">silent</span><span class="token operator">></span><span class="token operator">&lt;</span>nowait<span class="token operator">></span> <span class="token operator">&lt;</span>space<span class="token operator">></span>om  <span class="token punctuation">:</span><span class="token operator">&lt;</span>C<span class="token operator">-</span><span class="token keyword">u</span><span class="token operator">></span>Clap <span class="token keyword">marks</span><span class="token operator">&lt;</span>CR<span class="token operator">></span>
+nnoremap <span class="token operator">&lt;</span><span class="token keyword">silent</span><span class="token operator">></span><span class="token operator">&lt;</span>nowait<span class="token operator">></span> <span class="token operator">&lt;</span>space<span class="token operator">></span>ow  <span class="token punctuation">:</span><span class="token operator">&lt;</span>C<span class="token operator">-</span><span class="token keyword">u</span><span class="token operator">></span>Clap windows<span class="token operator">&lt;</span>CR<span class="token operator">></span>
+nnoremap <span class="token operator">&lt;</span><span class="token keyword">silent</span><span class="token operator">></span><span class="token operator">&lt;</span>nowait<span class="token operator">></span> <span class="token operator">&lt;</span>space<span class="token operator">></span>ot  <span class="token punctuation">:</span><span class="token operator">&lt;</span>C<span class="token operator">-</span><span class="token keyword">u</span><span class="token operator">></span>Clap <span class="token keyword">tags</span><span class="token operator">&lt;</span>CR<span class="token operator">></span>
+nnoremap <span class="token operator">&lt;</span><span class="token keyword">silent</span><span class="token operator">></span><span class="token operator">&lt;</span>nowait<span class="token operator">></span> <span class="token operator">&lt;</span>space<span class="token operator">></span>os  <span class="token punctuation">:</span><span class="token operator">&lt;</span>C<span class="token operator">-</span><span class="token keyword">u</span><span class="token operator">></span>Clap colors<span class="token operator">&lt;</span>CR<span class="token operator">></span>
+nnoremap <span class="token operator">&lt;</span><span class="token keyword">silent</span><span class="token operator">></span><span class="token operator">&lt;</span>nowait<span class="token operator">></span> <span class="token operator">&lt;</span>space<span class="token operator">></span>og <span class="token punctuation">:</span><span class="token operator">&lt;</span>C<span class="token operator">-</span><span class="token keyword">u</span><span class="token operator">></span>Clap grep2<span class="token operator">&lt;</span>CR<span class="token operator">></span>
 
-let g:which_key_map1.o &#x3D; &#123;
-444\ &#39;name&#39; : &#39;+clap&#39;,
-444\ &#39;p&#39; : &#39;clap&#39;,
-444\ &#39;b&#39; : &#39;buffers&#39;,
-444\ &#39;c&#39; : &#39;command&#39;,
-444\ &#39;h&#39; : &#39;file history&#39;,
-444\ &#39;f&#39; : &#39;search file&#39;,
-444\ &#39;q&#39; : &#39;quickfix list&#39;,
-444\ &#39;j&#39; : &#39;jumps&#39;,
-444\ &#39;m&#39; : &#39;marks&#39;,
-444\ &#39;w&#39; : &#39;windows&#39;,
-444\ &#39;t&#39; : &#39;tags&#39;,
-444\ &#39;s&#39; : &#39;colors&#39;,
-444\ &#39;g&#39; : &#39;find word&#39;,
-444\ &#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<span class="token keyword">let</span> g<span class="token punctuation">:</span>which_key_map1<span class="token operator">.</span><span class="token keyword">o</span> <span class="token operator">=</span> <span class="token punctuation">&#123;</span>
+	\ <span class="token string">'name'</span> <span class="token punctuation">:</span> <span class="token string">'+clap'</span><span class="token punctuation">,</span>
+	\ <span class="token string">'p'</span> <span class="token punctuation">:</span> <span class="token string">'clap'</span><span class="token punctuation">,</span>
+	\ <span class="token string">'b'</span> <span class="token punctuation">:</span> <span class="token string">'buffers'</span><span class="token punctuation">,</span>
+	\ <span class="token string">'c'</span> <span class="token punctuation">:</span> <span class="token string">'command'</span><span class="token punctuation">,</span>
+	\ <span class="token string">'h'</span> <span class="token punctuation">:</span> <span class="token string">'file history'</span><span class="token punctuation">,</span>
+	\ <span class="token string">'f'</span> <span class="token punctuation">:</span> <span class="token string">'search file'</span><span class="token punctuation">,</span>
+	\ <span class="token string">'q'</span> <span class="token punctuation">:</span> <span class="token string">'quickfix list'</span><span class="token punctuation">,</span>
+	\ <span class="token string">'j'</span> <span class="token punctuation">:</span> <span class="token string">'jumps'</span><span class="token punctuation">,</span>
+	\ <span class="token string">'m'</span> <span class="token punctuation">:</span> <span class="token string">'marks'</span><span class="token punctuation">,</span>
+	\ <span class="token string">'w'</span> <span class="token punctuation">:</span> <span class="token string">'windows'</span><span class="token punctuation">,</span>
+	\ <span class="token string">'t'</span> <span class="token punctuation">:</span> <span class="token string">'tags'</span><span class="token punctuation">,</span>
+	\ <span class="token string">'s'</span> <span class="token punctuation">:</span> <span class="token string">'colors'</span><span class="token punctuation">,</span>
+	\ <span class="token string">'g'</span> <span class="token punctuation">:</span> <span class="token string">'find word'</span><span class="token punctuation">,</span>
+	\ <span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <h2 id="coc-list"><a href="#coc-list" class="headerlink" title="coc list"></a>coc list</h2><p>coc list 是 coc.nvim 自带的模糊查找功能模块。它不仅可以用于控制补全源、lsp 等的开关，coc 插件的调用，也具有部分模糊查找的功能，不过功能暂时还没有那么强大，并不支持那么多内容的查找。有兴趣的可以自行研究。</p>
 
@@ -1213,7 +1213,7 @@ let g:which_key_map1.o &#x3D; &#123;
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">30.8k</span>&nbsp;字
+                class="white-color">29.2k</span>&nbsp;字
             
             
             

@@ -41,7 +41,7 @@
     <script src="/libs/jquery/jquery.min.js"></script>
 
 <meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/atom.xml" title="niuiic 's blogs" type="application/atom+xml">
-<link rel="stylesheet" href="/css/prism.css" type="text/css"></head>
+</head>
 
 
 
@@ -541,13 +541,13 @@ sudo make install<span aria-hidden="true" class="line-numbers-rows"><span></span
 <p>需要注意的是，如果不介意官网提供的 gcc 版本较低，尽量使用官网的版本。自己编译的 gcc 缺少头文件等问题的情况只会更严重。如 gentoo crossdev 中编译而成的 msp430-elf-gcc，进行上述操作添加头文件后，虽然可以编译程序，但实际上是错误编译，这些可执行文件不可实际运行。这种情况下还需要做更多的处理。</p>
 <h3 id="编辑器自动补全与语法检查"><a href="#编辑器自动补全与语法检查" class="headerlink" title="编辑器自动补全与语法检查"></a>编辑器自动补全与语法检查</h3><p>neovim 可以使用 coc.nvim，并安装 coc-clangd 插件。对于其他编辑器而言，也可以使用类似的 lsp。通用的一点是<code>compile_commands.json</code>文件，这决定了 lsp 补全与检查的依据。该文件可以使用工具从 makefile 或 CMakeList.txt 生成。</p>
 <p>什么都不会也没有关系，直接写就行，只需要七行即可。</p>
-<pre class="line-numbers language-json" data-language="json"><code class="language-json">[
-  &#123;
-    &quot;directory&quot;: &quot;工作目录路径&quot;,
-    &quot;command&quot;: &quot;编译指令，可以借用一下ccs内置的gcc，把头文件和微处理器型号写入，可参考上面的gcc编译命令&quot;,
-    &quot;file&quot;: &quot;需要编译的文件，如.&#x2F;main.c&quot;
-  &#125;
-]<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-json" data-language="json"><code class="language-json"><span class="token punctuation">[</span>
+  <span class="token punctuation">&#123;</span>
+    <span class="token property">"directory"</span><span class="token operator">:</span> <span class="token string">"工作目录路径"</span><span class="token punctuation">,</span>
+    <span class="token property">"command"</span><span class="token operator">:</span> <span class="token string">"编译指令，可以借用一下ccs内置的gcc，把头文件和微处理器型号写入，可参考上面的gcc编译命令"</span><span class="token punctuation">,</span>
+    <span class="token property">"file"</span><span class="token operator">:</span> <span class="token string">"需要编译的文件，如./main.c"</span>
+  <span class="token punctuation">&#125;</span>
+<span class="token punctuation">]</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p>将其置于工程目录下即可。</p>
 <p>建议将 ccs 安装目录中所有头文件复制到一个目录下，使用<code>-I</code>指定该目录即可。对于部分缺少的定义，可以自行在该目录下的头文件中添加，这样也不影响 ccs 编译程序。这里关于缺少的定义稍微解释一下。举个常见的例子，如<code>__intertupt</code>。如果你使用它，lsp 会报未定义错误，但是在 ccs 编译器中不会发生，且可以成功编译。查找所有的头文件，确实没有定义。这个时候就可以手动加上，骗过 lsp。如调用了”msp430g2553.h”，则在该头文件末尾加上<code>define __intertupt</code>。</p>
@@ -1233,7 +1233,7 @@ c
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">30.8k</span>&nbsp;字
+                class="white-color">29.2k</span>&nbsp;字
             
             
             

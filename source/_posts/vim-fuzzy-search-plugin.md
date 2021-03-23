@@ -55,20 +55,20 @@ nnoremap <silent><nowait> <space>os  :<C-u>Clap colors<CR>
 nnoremap <silent><nowait> <space>og :<C-u>Clap grep2<CR>
 
 let g:which_key_map1.o = {
-			\ 'name' : '+clap',
-			\ 'p' : 'clap',
-			\ 'b' : 'buffers',
-			\ 'c' : 'command',
-			\ 'h' : 'file history',
-			\ 'f' : 'search file',
-			\ 'q' : 'quickfix list',
-			\ 'j' : 'jumps',
-			\ 'm' : 'marks',
-			\ 'w' : 'windows',
-			\ 't' : 'tags',
-			\ 's' : 'colors',
-			\ 'g' : 'find word',
-			\ }
+	\ 'name' : '+clap',
+	\ 'p' : 'clap',
+	\ 'b' : 'buffers',
+	\ 'c' : 'command',
+	\ 'h' : 'file history',
+	\ 'f' : 'search file',
+	\ 'q' : 'quickfix list',
+	\ 'j' : 'jumps',
+	\ 'm' : 'marks',
+	\ 'w' : 'windows',
+	\ 't' : 'tags',
+	\ 's' : 'colors',
+	\ 'g' : 'find word',
+	\ }
 ```
 
 ## coc list

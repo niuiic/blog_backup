@@ -41,7 +41,7 @@
     <script src="/libs/jquery/jquery.min.js"></script>
 
 <meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/atom.xml" title="niuiic 's blogs" type="application/atom+xml">
-<link rel="stylesheet" href="/css/prism.css" type="text/css"></head>
+</head>
 
 
 
@@ -482,14 +482,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.1k
+                    919
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    5 分
+                    4 分
                 </div>
                 
 
@@ -527,28 +527,28 @@
 <h3 id="vim-which-key-安装"><a href="#vim-which-key-安装" class="headerlink" title="vim-which-key 安装"></a>vim-which-key 安装</h3><p>访问其<a target="_blank" rel="noopener" href="https://github.com/liuchengxu/vim-which-key">github 主页</a></p>
 <p>直接用插件管理器安装即可。</p>
 <h3 id="vim-which-key-配置"><a href="#vim-which-key-配置" class="headerlink" title="vim-which-key 配置"></a>vim-which-key 配置</h3><p>首先给出我的部分配置，分析在配置中。</p>
-<pre class="line-numbers language-vim" data-language="vim"><code class="language-vim">&quot; 定义字典变量，这将是后续为具体快捷键定义提示的基础。注意这些行必须在所有具体定义之前，否则会报错，提示变量未定义。
-let g:which_key_map1 &#x3D;  &#123;&#125;
-let g:which_key_map2 &#x3D;  &#123;&#125;
+<pre class="line-numbers language-vim" data-language="vim"><code class="language-vim"><span class="token comment">" 定义字典变量，这将是后续为具体快捷键定义提示的基础。注意这些行必须在所有具体定义之前，否则会报错，提示变量未定义。</span>
+<span class="token keyword">let</span> g<span class="token punctuation">:</span>which_key_map1 <span class="token operator">=</span>  <span class="token punctuation">&#123;</span><span class="token punctuation">&#125;</span>
+<span class="token keyword">let</span> g<span class="token punctuation">:</span>which_key_map2 <span class="token operator">=</span>  <span class="token punctuation">&#123;</span><span class="token punctuation">&#125;</span>
 
-&quot; 设置leader与localleader键位，也可以不设置，明确是哪个就好。
-let g:mapleader &#x3D; &quot;\\&quot;
-let g:maplocalleader &#x3D; &quot;\&lt;Space&gt;&quot;
+<span class="token comment">" 设置leader与localleader键位，也可以不设置，明确是哪个就好。</span>
+<span class="token keyword">let</span> g<span class="token punctuation">:</span>mapleader <span class="token operator">=</span> <span class="token string">"\\"</span>
+<span class="token keyword">let</span> g<span class="token punctuation">:</span>maplocalleader <span class="token operator">=</span> <span class="token string">"\&lt;Space>"</span>
 
-&quot; 为具体的按键绑定字典变量。这样当按下该键一段时间后，会自动展开该键下的提示。
-call which_key#register(&#39;&lt;Space&gt;&#39;, &quot;g:which_key_map1&quot;)
-call which_key#register(&#39;\&#39;, &quot;g:which_key_map2&quot;)
+<span class="token comment">" 为具体的按键绑定字典变量。这样当按下该键一段时间后，会自动展开该键下的提示。</span>
+<span class="token keyword">call</span> which_key#<span class="token function">register</span><span class="token punctuation">(</span><span class="token string">'&lt;Space>'</span><span class="token punctuation">,</span> <span class="token string">"g:which_key_map1"</span><span class="token punctuation">)</span>
+<span class="token keyword">call</span> which_key#<span class="token function">register</span><span class="token punctuation">(</span><span class="token string">'\'</span><span class="token punctuation">,</span> <span class="token string">"g:which_key_map2"</span><span class="token punctuation">)</span>
 
-&quot; 定义vim-which-key自身的快捷键，使得插件在该键按下的时候响应。
-nnoremap &lt;silent&gt; &lt;localleader&gt; :&lt;c-u&gt;WhichKey &#39;&lt;Space&gt;&#39;&lt;CR&gt;
-vnoremap &lt;silent&gt; &lt;localleader&gt; :&lt;c-u&gt;WhichKeyVisual &#39;&lt;Space&gt;&#39;&lt;CR&gt;
-nnoremap &lt;silent&gt; &lt;leader&gt; :&lt;c-u&gt;WhichKey &#39;\&#39;&lt;CR&gt;
-vnoremap &lt;silent&gt; &lt;leader&gt; :&lt;c-u&gt;WhichKeyVisual &#39;\&#39;&lt;CR&gt;
+<span class="token comment">" 定义vim-which-key自身的快捷键，使得插件在该键按下的时候响应。</span>
+nnoremap <span class="token operator">&lt;</span><span class="token keyword">silent</span><span class="token operator">></span> <span class="token operator">&lt;</span>localleader<span class="token operator">></span> <span class="token punctuation">:</span><span class="token operator">&lt;</span><span class="token keyword">c</span><span class="token operator">-</span><span class="token keyword">u</span><span class="token operator">></span>WhichKey <span class="token string">'&lt;Space>'</span><span class="token operator">&lt;</span>CR<span class="token operator">></span>
+vnoremap <span class="token operator">&lt;</span><span class="token keyword">silent</span><span class="token operator">></span> <span class="token operator">&lt;</span>localleader<span class="token operator">></span> <span class="token punctuation">:</span><span class="token operator">&lt;</span><span class="token keyword">c</span><span class="token operator">-</span><span class="token keyword">u</span><span class="token operator">></span>WhichKeyVisual <span class="token string">'&lt;Space>'</span><span class="token operator">&lt;</span>CR<span class="token operator">></span>
+nnoremap <span class="token operator">&lt;</span><span class="token keyword">silent</span><span class="token operator">></span> <span class="token operator">&lt;</span>leader<span class="token operator">></span> <span class="token punctuation">:</span><span class="token operator">&lt;</span><span class="token keyword">c</span><span class="token operator">-</span><span class="token keyword">u</span><span class="token operator">></span>WhichKey <span class="token string">'\'</span><span class="token operator">&lt;</span>CR<span class="token operator">></span>
+vnoremap <span class="token operator">&lt;</span><span class="token keyword">silent</span><span class="token operator">></span> <span class="token operator">&lt;</span>leader<span class="token operator">></span> <span class="token punctuation">:</span><span class="token operator">&lt;</span><span class="token keyword">c</span><span class="token operator">-</span><span class="token keyword">u</span><span class="token operator">></span>WhichKeyVisual <span class="token string">'\'</span><span class="token operator">&lt;</span>CR<span class="token operator">></span>
 
-&quot; 隐藏提供的提供的statusline的主题（该主题不灵活）。也可以不设置。
-autocmd! FileType which_key
-autocmd  FileType which_key set laststatus&#x3D;0 noshowmode noruler
-444\| autocmd BufLeave &lt;buffer&gt; set laststatus&#x3D;2 showmode ruler<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<span class="token comment">" 隐藏提供的提供的statusline的主题（该主题不灵活）。也可以不设置。</span>
+<span class="token builtin">autocmd</span><span class="token operator">!</span> FileType which_key
+<span class="token builtin">autocmd</span>  FileType which_key <span class="token keyword">set</span> <span class="token builtin">laststatus</span><span class="token operator">=</span><span class="token number">0</span> <span class="token builtin">noshowmode</span> <span class="token builtin">noruler</span>
+			\| <span class="token builtin">autocmd</span> BufLeave <span class="token operator">&lt;</span><span class="token keyword">buffer</span><span class="token operator">></span> <span class="token keyword">set</span> <span class="token builtin">laststatus</span><span class="token operator">=</span><span class="token number">2</span> <span class="token builtin">showmode</span> <span class="token builtin">ruler</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p>至此，我们可以为具体快捷键配置提示信息了。</p>
 <h3 id="具体提示信息配置"><a href="#具体提示信息配置" class="headerlink" title="具体提示信息配置"></a>具体提示信息配置</h3><p>默认情况下，即使不进行配置，vim-which-key 也会自动搜集所有插件的快捷键，但是仅显示快捷键绑定的命令，提示效果较差。</p>
@@ -557,64 +557,64 @@ autocmd  FileType which_key set laststatus&#x3D;0 noshowmode noruler
 <li>案例一</li>
 </ul>
 <pre class="line-numbers language-vim" data-language="vim"><code class="language-vim">
-&quot; coc-translator
-&quot; popup
-nmap &lt;silent&gt;&lt;nowait&gt; &lt;space&gt;tp  &lt;Plug&gt;(coc-translator-p)
-vmap &lt;silent&gt;&lt;nowait&gt; &lt;space&gt;tp  &lt;Plug&gt;(coc-translator-pv)
-&quot; echo
-nmap &lt;silent&gt;&lt;nowait&gt; &lt;space&gt;te  &lt;Plug&gt;(coc-translator-e)
-vmap &lt;silent&gt;&lt;nowait&gt; &lt;space&gt;te  &lt;Plug&gt;(coc-translator-ev)
-&quot; replace
-nmap &lt;silent&gt;&lt;nowait&gt; &lt;space&gt;tr  &lt;Plug&gt;(coc-translator-r)
-vmap &lt;silent&gt;&lt;nowait&gt; &lt;space&gt;tr  &lt;Plug&gt;(coc-translator-rv)
+<span class="token comment">" coc-translator</span>
+<span class="token comment">" popup</span>
+nmap <span class="token operator">&lt;</span><span class="token keyword">silent</span><span class="token operator">></span><span class="token operator">&lt;</span>nowait<span class="token operator">></span> <span class="token operator">&lt;</span>space<span class="token operator">></span><span class="token keyword">tp</span>  <span class="token operator">&lt;</span>Plug<span class="token operator">></span><span class="token punctuation">(</span>coc<span class="token operator">-</span>translator<span class="token operator">-</span><span class="token keyword">p</span><span class="token punctuation">)</span>
+vmap <span class="token operator">&lt;</span><span class="token keyword">silent</span><span class="token operator">></span><span class="token operator">&lt;</span>nowait<span class="token operator">></span> <span class="token operator">&lt;</span>space<span class="token operator">></span><span class="token keyword">tp</span>  <span class="token operator">&lt;</span>Plug<span class="token operator">></span><span class="token punctuation">(</span>coc<span class="token operator">-</span>translator<span class="token operator">-</span>pv<span class="token punctuation">)</span>
+<span class="token comment">" echo</span>
+nmap <span class="token operator">&lt;</span><span class="token keyword">silent</span><span class="token operator">></span><span class="token operator">&lt;</span>nowait<span class="token operator">></span> <span class="token operator">&lt;</span>space<span class="token operator">></span><span class="token keyword">te</span>  <span class="token operator">&lt;</span>Plug<span class="token operator">></span><span class="token punctuation">(</span>coc<span class="token operator">-</span>translator<span class="token operator">-</span><span class="token keyword">e</span><span class="token punctuation">)</span>
+vmap <span class="token operator">&lt;</span><span class="token keyword">silent</span><span class="token operator">></span><span class="token operator">&lt;</span>nowait<span class="token operator">></span> <span class="token operator">&lt;</span>space<span class="token operator">></span><span class="token keyword">te</span>  <span class="token operator">&lt;</span>Plug<span class="token operator">></span><span class="token punctuation">(</span>coc<span class="token operator">-</span>translator<span class="token operator">-</span>ev<span class="token punctuation">)</span>
+<span class="token comment">" replace</span>
+nmap <span class="token operator">&lt;</span><span class="token keyword">silent</span><span class="token operator">></span><span class="token operator">&lt;</span>nowait<span class="token operator">></span> <span class="token operator">&lt;</span>space<span class="token operator">></span><span class="token keyword">tr</span>  <span class="token operator">&lt;</span>Plug<span class="token operator">></span><span class="token punctuation">(</span>coc<span class="token operator">-</span>translator<span class="token operator">-</span><span class="token keyword">r</span><span class="token punctuation">)</span>
+vmap <span class="token operator">&lt;</span><span class="token keyword">silent</span><span class="token operator">></span><span class="token operator">&lt;</span>nowait<span class="token operator">></span> <span class="token operator">&lt;</span>space<span class="token operator">></span><span class="token keyword">tr</span>  <span class="token operator">&lt;</span>Plug<span class="token operator">></span><span class="token punctuation">(</span>coc<span class="token operator">-</span>translator<span class="token operator">-</span><span class="token keyword">rv</span><span class="token punctuation">)</span>
 
-&quot; 以上为其余插件的快捷键配置。以下为vim-which-key的配置。
+<span class="token comment">" 以上为其余插件的快捷键配置。以下为vim-which-key的配置。</span>
 
-let g:which_key_map1.t &#x3D; &#123;
-444\ &#39;name&#39; : &#39;+translate&#39;,
-444\ &#39;p&#39; : &#39;popup&#39;,
-444\ &#39;e&#39; : &#39;echo&#39;,
-444\ &#39;r&#39; : &#39;replace&#39;,
-444\ &#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<span class="token keyword">let</span> g<span class="token punctuation">:</span>which_key_map1<span class="token operator">.</span><span class="token keyword">t</span> <span class="token operator">=</span> <span class="token punctuation">&#123;</span>
+			\ <span class="token string">'name'</span> <span class="token punctuation">:</span> <span class="token string">'+translate'</span><span class="token punctuation">,</span>
+			\ <span class="token string">'p'</span> <span class="token punctuation">:</span> <span class="token string">'popup'</span><span class="token punctuation">,</span>
+			\ <span class="token string">'e'</span> <span class="token punctuation">:</span> <span class="token string">'echo'</span><span class="token punctuation">,</span>
+			\ <span class="token string">'r'</span> <span class="token punctuation">:</span> <span class="token string">'replace'</span><span class="token punctuation">,</span>
+			\ <span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <ul>
 <li>案例二</li>
 </ul>
-<pre class="line-numbers language-vim" data-language="vim"><code class="language-vim">let g:which_key_map1.l &#x3D; &#39;move to line&#39;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre class="line-numbers language-vim" data-language="vim"><code class="language-vim"><span class="token keyword">let</span> g<span class="token punctuation">:</span>which_key_map1<span class="token operator">.</span><span class="token keyword">l</span> <span class="token operator">=</span> <span class="token string">'move to line'</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <ul>
 <li>案例三</li>
 </ul>
 <p>注意该案例中<code>l</code>处又是一层嵌套。</p>
-<pre class="line-numbers language-vim" data-language="vim"><code class="language-vim">let g:which_key_map1.d &#x3D; &#123;
-444\ &#39;name&#39; : &#39;+debug&#39;,
-444\ &#39;e&#39; : &#39;eval&#39;,
-444\ &#39;w&#39; : &#39;variable watch&#39;,
-444\ &#39;s&#39; : &#39;start or continue&#39;,
-444\ &#39;t&#39; : &#39;stop&#39;,
-444\ &#39;r&#39; : &#39;restart&#39;,
-444\ &#39;p&#39; : &#39;pause&#39;,
-444\ &#39;b&#39; : &#39;set breakpoint&#39;,
-444\ &#39;c&#39; : &#39;set condition breakpoint&#39;,
-444\ &#39;f&#39; : &#39;add function breakpoint&#39;,
-444\ &#39;n&#39; : &#39;next&#39;,
-444\ &#39;i&#39; : &#39;step in&#39;,
-444\ &#39;o&#39; : &#39;step out&#39;,
-444\ &#39;q&#39; : &#39;quit&#39;,
-444\ &#39;l&#39; :  &#123;
-444\ &#39;name&#39; : &#39;+switch_output&#39;,
-444\ &#39;c&#39; : &#39;Console&#39;,
-444\ &#39;d&#39; : &#39;stderr&#39;,
-444\ &#39;o&#39; : &#39;Vimspector-out&#39;,
-444\ &#39;e&#39; : &#39;Vimspector-err&#39;,
-444\ &#39;s&#39; : &#39;server&#39;,
-444\ &#39;t&#39; : &#39;Telemetry&#39;,
-444\&#125;,
-444\&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-vim" data-language="vim"><code class="language-vim"><span class="token keyword">let</span> g<span class="token punctuation">:</span>which_key_map1<span class="token operator">.</span><span class="token keyword">d</span> <span class="token operator">=</span> <span class="token punctuation">&#123;</span>
+			\ <span class="token string">'name'</span> <span class="token punctuation">:</span> <span class="token string">'+debug'</span><span class="token punctuation">,</span>
+			\ <span class="token string">'e'</span> <span class="token punctuation">:</span> <span class="token string">'eval'</span><span class="token punctuation">,</span>
+			\ <span class="token string">'w'</span> <span class="token punctuation">:</span> <span class="token string">'variable watch'</span><span class="token punctuation">,</span>
+			\ <span class="token string">'s'</span> <span class="token punctuation">:</span> <span class="token string">'start or continue'</span><span class="token punctuation">,</span>
+			\ <span class="token string">'t'</span> <span class="token punctuation">:</span> <span class="token string">'stop'</span><span class="token punctuation">,</span>
+			\ <span class="token string">'r'</span> <span class="token punctuation">:</span> <span class="token string">'restart'</span><span class="token punctuation">,</span>
+			\ <span class="token string">'p'</span> <span class="token punctuation">:</span> <span class="token string">'pause'</span><span class="token punctuation">,</span>
+			\ <span class="token string">'b'</span> <span class="token punctuation">:</span> <span class="token string">'set breakpoint'</span><span class="token punctuation">,</span>
+			\ <span class="token string">'c'</span> <span class="token punctuation">:</span> <span class="token string">'set condition breakpoint'</span><span class="token punctuation">,</span>
+			\ <span class="token string">'f'</span> <span class="token punctuation">:</span> <span class="token string">'add function breakpoint'</span><span class="token punctuation">,</span>
+			\ <span class="token string">'n'</span> <span class="token punctuation">:</span> <span class="token string">'next'</span><span class="token punctuation">,</span>
+			\ <span class="token string">'i'</span> <span class="token punctuation">:</span> <span class="token string">'step in'</span><span class="token punctuation">,</span>
+			\ <span class="token string">'o'</span> <span class="token punctuation">:</span> <span class="token string">'step out'</span><span class="token punctuation">,</span>
+			\ <span class="token string">'q'</span> <span class="token punctuation">:</span> <span class="token string">'quit'</span><span class="token punctuation">,</span>
+			\ <span class="token string">'l'</span> <span class="token punctuation">:</span>  <span class="token punctuation">&#123;</span>
+			\ <span class="token string">'name'</span> <span class="token punctuation">:</span> <span class="token string">'+switch_output'</span><span class="token punctuation">,</span>
+			\ <span class="token string">'c'</span> <span class="token punctuation">:</span> <span class="token string">'Console'</span><span class="token punctuation">,</span>
+			\ <span class="token string">'d'</span> <span class="token punctuation">:</span> <span class="token string">'stderr'</span><span class="token punctuation">,</span>
+			\ <span class="token string">'o'</span> <span class="token punctuation">:</span> <span class="token string">'Vimspector-out'</span><span class="token punctuation">,</span>
+			\ <span class="token string">'e'</span> <span class="token punctuation">:</span> <span class="token string">'Vimspector-err'</span><span class="token punctuation">,</span>
+			\ <span class="token string">'s'</span> <span class="token punctuation">:</span> <span class="token string">'server'</span><span class="token punctuation">,</span>
+			\ <span class="token string">'t'</span> <span class="token punctuation">:</span> <span class="token string">'Telemetry'</span><span class="token punctuation">,</span>
+			\<span class="token punctuation">&#125;</span><span class="token punctuation">,</span>
+			\<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p>你也可以忽略部分按键的提示，将其提示设置为<code>which_key_ignore</code>即可。比如</p>
-<pre class=" language-vim"><code class="language-vim"><span class="token keyword">let</span> g<span class="token punctuation">:</span>which_key_map2<span class="token punctuation">[</span><span class="token string">'\'</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token string">'which_key_ignore'</span>
-<span class="token keyword">let</span> g<span class="token punctuation">:</span>which_key_map2<span class="token punctuation">[</span><span class="token string">'\A'</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token string">'which_key_ignore'</span>
+<pre><code class="vim">let g:which_key_map2[&#39;\&#39;] = &#39;which_key_ignore&#39;
+let g:which_key_map2[&#39;\A&#39;] = &#39;which_key_ignore&#39;
 </code></pre>
 
                 
@@ -1267,7 +1267,7 @@ let g:which_key_map1.t &#x3D; &#123;
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">30.8k</span>&nbsp;字
+                class="white-color">29.2k</span>&nbsp;字
             
             
             
