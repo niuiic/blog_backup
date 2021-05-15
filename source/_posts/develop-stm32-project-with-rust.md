@@ -2,11 +2,11 @@
 title: Develop Stm32 Project with Rust
 date: 2021-03-23 18:19:56
 tags:
-		- Stm32
-		- Rust
+    - Rust
+    - Stm32
 categories:
-		- Rust
-		- MCU
+    - [MCU]
+    - [Rust]
 ---
 
 # 使用 rust 开发 stm32
@@ -17,7 +17,7 @@ categories:
 
 本文使用的芯片为 STM32F103C8T6。该芯片性价比较高，价格低廉，适合入门学习。需要注意的是该款芯片为国产仿品，在烧录的时候需要对软件进行一定修改。
 
-仿真器选用 STLINK V2。
+仿真器选用 STLINK V2。也可以选择 jlink。后者连接似乎更加稳定，不过使用外设时需要更加小心。
 
 连接时只需要按板子上的标注把相同的引脚连起来即可。
 
@@ -123,7 +123,7 @@ features = ["stm32f103", "rt", "medium"]
 version = "^0.6.1"
 ```
 
-在项目根目录下新建项目配置`mkdir .cargo`。其中由于使用 lld 进行链接后会丢失调试信息，因此将 linker 指定为 gcc，。runner 是执行`cargo run`之后自动执行的命令，此处为自动开启 gdb 并加载文件。
+在项目根目录下新建项目配置`mkdir .cargo`。其中由于使用 lld 进行链接后会丢失调试信息，因此将 linker 指定为 gcc。runner 是执行`cargo run`之后自动执行的命令，此处为自动开启 gdb 并加载文件。
 
 ```
 # .cargo/config
@@ -195,6 +195,7 @@ fn main() -> ! {
 ```
 # 连接仿真器
 openocd -f interface/stlink-v2.cfg -f target/stm32f1x.cfg
+# 如果仿真器选用jlink，则命令为openocd -f interface/jlink.cfg -f target/stm32f1x.cfg
 # 出现以下信息为连接成功
 Info : stm32f1x.cpu: hardware has 6 breakpoints, 4 watchpoints
 

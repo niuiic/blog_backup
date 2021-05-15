@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Vim Automatic Completion, niuiic &#39;s blogs">
+    <meta name="keywords" content="Vim Automatic Completion, niuiic &#39;s Blog">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -27,7 +27,7 @@
 </script>
 
 
-    <title>Vim Automatic Completion | niuiic &#39;s blogs</title>
+    <title>Vim Automatic Completion | niuiic &#39;s Blog</title>
     <link rel="icon" type="image/png" href="/medias/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -40,7 +40,7 @@
 
     <script src="/libs/jquery/jquery.min.js"></script>
 
-<meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/atom.xml" title="niuiic 's blogs" type="application/atom+xml">
+<meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/atom.xml" title="niuiic 's Blog" type="application/atom+xml">
 </head>
 
 
@@ -55,7 +55,7 @@
                     
                     <img src="/medias/logo.png" class="logo-img" alt="LOGO">
                     
-                    <span class="logo-span">niuiic &#39;s blogs</span>
+                    <span class="logo-span">niuiic &#39;s Blog</span>
                 </a>
             </div>
             
@@ -154,7 +154,7 @@
         
         <img src="/medias/logo.png" class="logo-img circle responsive-img">
         
-        <div class="logo-name">niuiic &#39;s blogs</div>
+        <div class="logo-name">niuiic &#39;s Blog</div>
         <div class="logo-desc">
             
             Never really desperate, only the lost of the soul.
@@ -475,14 +475,14 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-03-23
+                    2021-04-16
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    2k
+                    2.1k
                 </div>
                 
 
@@ -530,13 +530,13 @@
 <span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p>注意<code>command</code>必须保证可用。</p>
-<p>关于coc插件以及lsp配置的具体内容可以参考<a target="_blank" rel="noopener" href="https://github.com/neoclide/coc.nvim/wiki">coc.nvim wiki</a>。</p>
-<p>到此，rust语言的自动补全已经配置完成，静态检查也同步配置完成。但仅仅如此还不可以使用。coc.nvim的自动配置在项目工程中才能起作用。如单独编写一个<code>main.rs</code>，则不会有语义提示。必须以<code>cargo new demo</code>新建一个工程，插件检测到<code>Cargo.toml</code>后才会启动语义的自动补全。当然也有可以直接在单文件中提示的特例，如markdown语言，本身就不存在工程的概念。</p>
+<p>关于 coc 插件以及 lsp 配置的具体内容可以参考<a target="_blank" rel="noopener" href="https://github.com/neoclide/coc.nvim/wiki">coc.nvim wiki</a>。</p>
+<p>到此，rust 语言的自动补全已经配置完成，静态检查也同步配置完成。但仅仅如此还不可以使用。coc.nvim 的自动配置在项目工程中才能起作用。如单独编写一个<code>main.rs</code>，则不会有语义提示。必须以<code>cargo new demo</code>新建一个工程，插件检测到<code>Cargo.toml</code>后才会启动语义的自动补全。当然也有可以直接在单文件中提示的特例，如 markdown 语言，本身就不存在工程的概念。</p>
 <h3 id="片段补全"><a href="#片段补全" class="headerlink" title="片段补全"></a>片段补全</h3><p>安装<code>coc-actions</code>插件。</p>
 <p>再在<code>coc-snippets</code>、<code>coc-ultisnips</code>中选择一个或全选即可。注意需要同步安装<code>honza/vim-snippets</code>、<code>SirVer/ultisnips</code>。</p>
-<h3 id="自定义补全源"><a href="#自定义补全源" class="headerlink" title="自定义补全源"></a>自定义补全源</h3><p>coc.nvim默认的补全源来自当前打开的所有buffer、插件或lsp等。此外也可以自定义补全源。具体可参见<a target="_blank" rel="noopener" href="https://github.com/neoclide/coc.nvim/wiki/Create-custom-source">coc.nvim wiki</a></p>
-<p>下面以补全markdown中的latex语法为例，展示如何自定义补全源。</p>
-<p>创建目录<code>~/.config/nvim/autoload/coc/source</code>。这里以linux系统为例，其他系统的位置可以自行参考wiki。</p>
+<h3 id="自定义补全源"><a href="#自定义补全源" class="headerlink" title="自定义补全源"></a>自定义补全源</h3><p>coc.nvim 默认的补全源来自当前打开的所有 buffer、插件或 lsp 等。此外也可以自定义补全源。具体可参见<a target="_blank" rel="noopener" href="https://github.com/neoclide/coc.nvim/wiki/Create-custom-source">coc.nvim wiki</a></p>
+<p>下面以补全 markdown 中的 latex 语法为例，展示如何自定义补全源。</p>
+<p>创建目录<code>~/.config/nvim/autoload/coc/source</code>。这里以 linux 系统为例，其他系统的位置可以自行参考 wiki。</p>
 <p>创建<code>latex.vim</code>，写入</p>
 <pre class="line-numbers language-vim" data-language="vim"><code class="language-vim"><span class="token keyword">function</span><span class="token operator">!</span> coc#<span class="token keyword">source</span>#latex#<span class="token function">init</span><span class="token punctuation">(</span><span class="token punctuation">)</span> abort
 	<span class="token keyword">return</span> <span class="token punctuation">&#123;</span>
@@ -550,8 +550,19 @@
 	<span class="token keyword">call</span> a<span class="token punctuation">:</span><span class="token function">cb</span><span class="token punctuation">(</span>items<span class="token punctuation">)</span>
 <span class="token keyword">endfunction</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<p>简单分析一下。配置的主体框架按照wiki给出的例子照猫画虎即可。其中<code>triggerCharacters</code>表示触发字符，意思就是说当输入该字符时启动补全。<code>filetypes</code>表示该补全源作用的文件类型。更多选项参见wiki。</p>
-<h2 id="其他功能"><a href="#其他功能" class="headerlink" title="其他功能"></a>其他功能</h2><p>coc.nvim提供的其他功能还有很多，包括定义跳转、文档查询等等。感兴趣的可以自行研究。以下附上我的coc.nvim配置。仅供参考。其中<code>vim-which-key</code>的部分如果没有安装该插件就不必配置。</p>
+<p>简单分析一下。配置的主体框架按照 wiki 给出的例子照猫画虎即可。其中<code>triggerCharacters</code>表示触发字符，意思就是说当输入该字符时启动补全。<code>filetypes</code>表示该补全源作用的文件类型。更多选项参见 wiki。</p>
+<h2 id="修复定义跳转卡住的问题"><a href="#修复定义跳转卡住的问题" class="headerlink" title="修复定义跳转卡住的问题"></a>修复定义跳转卡住的问题</h2><p>使用 coc.nvim 的定义跳转到其他文件时，可能会直接卡死。原因不明，可能是文件太大加载不过来，但也存在小文件被卡住的问题。</p>
+<p>修复方案是重启语法分析。</p>
+<pre class="line-numbers language-vim" data-language="vim"><code class="language-vim"><span class="token comment">" 关闭</span>
+<span class="token punctuation">:</span><span class="token builtin">syn</span> off
+<span class="token comment">" 开启</span>
+<span class="token punctuation">:</span><span class="token builtin">syn</span> enable<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>可以设置进入Vim时自动执行该命令，设置如下。</p>
+<pre class="line-numbers language-vim" data-language="vim"><code class="language-vim">au VimEnter <span class="token operator">*</span> <span class="token punctuation">:</span><span class="token builtin">syn</span> off<span class="token operator">&lt;</span>CR<span class="token operator">></span>
+au VimEnter <span class="token operator">*</span> <span class="token punctuation">:</span><span class="token builtin">syn</span> enable<span class="token operator">&lt;</span>CR<span class="token operator">></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<h2 id="其他功能"><a href="#其他功能" class="headerlink" title="其他功能"></a>其他功能</h2><p>coc.nvim 提供的其他功能还有很多，包括定义跳转、文档查询等等。感兴趣的可以自行研究。以下附上我的 coc.nvim 配置。仅供参考。其中<code>vim-which-key</code>的部分如果没有安装该插件就不必配置。</p>
 <pre class="line-numbers language-vim" data-language="vim"><code class="language-vim"><span class="token comment">" coc.nvim</span>
 inoremap <span class="token operator">&lt;</span>expr<span class="token operator">></span> <span class="token operator">&lt;</span>C<span class="token operator">-</span><span class="token keyword">j</span><span class="token operator">></span> <span class="token function">pumvisible</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">?</span> <span class="token string">"\&lt;C-n>"</span> <span class="token punctuation">:</span> <span class="token string">"\&lt;C-j>"</span>
 inoremap <span class="token operator">&lt;</span>expr<span class="token operator">></span> <span class="token operator">&lt;</span>C<span class="token operator">-</span><span class="token keyword">k</span><span class="token operator">></span> <span class="token function">pumvisible</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">?</span> <span class="token string">"\&lt;C-p>"</span> <span class="token punctuation">:</span> <span class="token string">"\&lt;C-k>"</span>
@@ -1061,8 +1072,8 @@ nnoremap <span class="token operator">&lt;</span><span class="token keyword">sil
 <script>
     new Valine({
         el: '#vcomments',
-        appId: 'nQ6X8XKooFkgASfOlxbMQbA3-gzGzoHsz',
-        appKey: 'tX8jjyMJB0LGskPj9BRqEK4Y',
+        appId: 'XtexzRTxtt9Y1iuPm0YeQOP9-MdYXbMMI',
+        appKey: 'wKBk7protfGIK7GemF8QuCIW',
         notify: 'true' === 'true',
         verify: 'true' === 'true',
         visitor: 'true' === 'true',
@@ -1218,7 +1229,7 @@ nnoremap <span class="token operator">&lt;</span><span class="token keyword">sil
 
         var url = document.location.href;
         newdiv.innerHTML += '<br />'
-            + '来源: niuiic &#39;s blogs<br />'
+            + '来源: niuiic &#39;s Blog<br />'
             + '文章作者: niuiic<br />'
             + '文章链接: <a href="' + url + '">' + url + '</a><br />'
             + '本文章著作权归作者所有，任何形式的转载都请注明出处。';
@@ -1363,7 +1374,7 @@ nnoremap <span class="token operator">&lt;</span><span class="token keyword">sil
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">29.2k</span>&nbsp;字
+                class="white-color">36.6k</span>&nbsp;字
             
             
             

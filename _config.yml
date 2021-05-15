@@ -3,8 +3,8 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: niuiic 's blogs
-subtitle: niuiic's blogs
+title: niuiic 's Blog
+subtitle: niuiic's Blog
 description: ''
 keywords:
 author: niuiic
@@ -56,7 +56,7 @@ prismjs:
   line_number: true
   # tab_replace: 4
 # Home page setting
-# path: Root path for your blogs index page. (default = '')
+# path: Root path for your blog's index page. (default = '')
 # per_page: Posts displayed per page. (0 = disable pagination)
 # order_by: Posts order. (Order by date descending by default)
 index_generator:
@@ -106,9 +106,7 @@ plugins: hexo-generate-feed
 deploy:
   type: git
   repository: 
-              github: https://github.com/niuiic/niuiic.github.io
-              #coding: https://e.coding.net/niuiic/niuiic/niuiic.git
-              
+    github: https://github.com/niuiic/niuiic.github.io
 search:
   path: search.xml
   field: post

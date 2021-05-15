@@ -47,9 +47,9 @@ coc.nvim 的补全可以采用安装插件或者配置 lsp 实现。
 
 注意`command`必须保证可用。
 
-关于coc插件以及lsp配置的具体内容可以参考[coc.nvim wiki](https://github.com/neoclide/coc.nvim/wiki)。
+关于 coc 插件以及 lsp 配置的具体内容可以参考[coc.nvim wiki](https://github.com/neoclide/coc.nvim/wiki)。
 
-到此，rust语言的自动补全已经配置完成，静态检查也同步配置完成。但仅仅如此还不可以使用。coc.nvim的自动配置在项目工程中才能起作用。如单独编写一个`main.rs`，则不会有语义提示。必须以`cargo new demo`新建一个工程，插件检测到`Cargo.toml`后才会启动语义的自动补全。当然也有可以直接在单文件中提示的特例，如markdown语言，本身就不存在工程的概念。
+到此，rust 语言的自动补全已经配置完成，静态检查也同步配置完成。但仅仅如此还不可以使用。coc.nvim 的自动配置在项目工程中才能起作用。如单独编写一个`main.rs`，则不会有语义提示。必须以`cargo new demo`新建一个工程，插件检测到`Cargo.toml`后才会启动语义的自动补全。当然也有可以直接在单文件中提示的特例，如 markdown 语言，本身就不存在工程的概念。
 
 ### 片段补全
 
@@ -59,11 +59,11 @@ coc.nvim 的补全可以采用安装插件或者配置 lsp 实现。
 
 ### 自定义补全源
 
-coc.nvim默认的补全源来自当前打开的所有buffer、插件或lsp等。此外也可以自定义补全源。具体可参见[coc.nvim wiki](https://github.com/neoclide/coc.nvim/wiki/Create-custom-source)
+coc.nvim 默认的补全源来自当前打开的所有 buffer、插件或 lsp 等。此外也可以自定义补全源。具体可参见[coc.nvim wiki](https://github.com/neoclide/coc.nvim/wiki/Create-custom-source)
 
-下面以补全markdown中的latex语法为例，展示如何自定义补全源。
+下面以补全 markdown 中的 latex 语法为例，展示如何自定义补全源。
 
-创建目录`~/.config/nvim/autoload/coc/source`。这里以linux系统为例，其他系统的位置可以自行参考wiki。
+创建目录`~/.config/nvim/autoload/coc/source`。这里以 linux 系统为例，其他系统的位置可以自行参考 wiki。
 
 创建`latex.vim`，写入
 
@@ -81,11 +81,31 @@ function! coc#source#latex#complete(opt, cb) abort
 endfunction
 ```
 
-简单分析一下。配置的主体框架按照wiki给出的例子照猫画虎即可。其中`triggerCharacters`表示触发字符，意思就是说当输入该字符时启动补全。`filetypes`表示该补全源作用的文件类型。更多选项参见wiki。
+简单分析一下。配置的主体框架按照 wiki 给出的例子照猫画虎即可。其中`triggerCharacters`表示触发字符，意思就是说当输入该字符时启动补全。`filetypes`表示该补全源作用的文件类型。更多选项参见 wiki。
+
+## 修复定义跳转卡住的问题
+
+使用 coc.nvim 的定义跳转到其他文件时，可能会直接卡死。原因不明，可能是文件太大加载不过来，但也存在小文件被卡住的问题。
+
+修复方案是重启语法分析。
+
+```vim
+" 关闭
+:syn off
+" 开启
+:syn enable
+```
+
+可以设置进入Vim时自动执行该命令，设置如下。
+
+```vim
+au VimEnter * :syn off<CR>
+au VimEnter * :syn enable<CR>
+```
 
 ## 其他功能
 
-coc.nvim提供的其他功能还有很多，包括定义跳转、文档查询等等。感兴趣的可以自行研究。以下附上我的coc.nvim配置。仅供参考。其中`vim-which-key`的部分如果没有安装该插件就不必配置。
+coc.nvim 提供的其他功能还有很多，包括定义跳转、文档查询等等。感兴趣的可以自行研究。以下附上我的 coc.nvim 配置。仅供参考。其中`vim-which-key`的部分如果没有安装该插件就不必配置。
 
 ```vim
 " coc.nvim

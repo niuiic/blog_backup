@@ -1,6 +1,46 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://www.niuiic.top/2021/03/23/develop-stm32-project-with-rust/</loc>
+    <lastmod>2021-05-15</lastmod>
+  </url>
+  <url>
+    <loc>https://www.niuiic.top/2021/05/15/create-vue3-project/</loc>
+    <lastmod>2021-05-15</lastmod>
+  </url>
+  <url>
+    <loc>https://www.niuiic.top/2021/05/15/install-manjaro-on-rpi4/</loc>
+    <lastmod>2021-05-15</lastmod>
+  </url>
+  <url>
+    <loc>https://www.niuiic.top/2021/05/15/use-realvnc-on-manjaro-on-rpi4/</loc>
+    <lastmod>2021-05-15</lastmod>
+  </url>
+  <url>
+    <loc>https://www.niuiic.top/2021/05/11/rust-tauri-hello-world/</loc>
+    <lastmod>2021-05-11</lastmod>
+  </url>
+  <url>
+    <loc>https://www.niuiic.top/2021/04/17/vim-quickfix/</loc>
+    <lastmod>2021-05-10</lastmod>
+  </url>
+  <url>
+    <loc>https://www.niuiic.top/2021/04/28/better-highlight-for-go-files-in-vim/</loc>
+    <lastmod>2021-04-28</lastmod>
+  </url>
+  <url>
+    <loc>https://www.niuiic.top/2021/04/24/better-use-of-rust-on-gentoo/</loc>
+    <lastmod>2021-04-24</lastmod>
+  </url>
+  <url>
+    <loc>https://www.niuiic.top/2021/04/18/vim-file-encoding/</loc>
+    <lastmod>2021-04-18</lastmod>
+  </url>
+  <url>
+    <loc>https://www.niuiic.top/2020/10/19/vim-automatic-completion/</loc>
+    <lastmod>2021-04-16</lastmod>
+  </url>
+  <url>
     <loc>https://www.niuiic.top/2021/03/23/vim-fuzzy-search-plugin/</loc>
     <lastmod>2021-03-23</lastmod>
   </url>
@@ -17,10 +57,6 @@
     <lastmod>2021-03-23</lastmod>
   </url>
   <url>
-    <loc>https://www.niuiic.top/2020/10/19/vim-automatic-completion/</loc>
-    <lastmod>2021-03-23</lastmod>
-  </url>
-  <url>
     <loc>https://www.niuiic.top/2021/03/23/vim-clipboard-history-plugin/</loc>
     <lastmod>2021-03-23</lastmod>
   </url>
@@ -30,6 +66,10 @@
   </url>
   <url>
     <loc>https://www.niuiic.top/2020/10/19/vim-file-tree/</loc>
+    <lastmod>2021-03-23</lastmod>
+  </url>
+  <url>
+    <loc>https://www.niuiic.top/2020/08/04/vim-markdown-latex/</loc>
     <lastmod>2021-03-23</lastmod>
   </url>
   <url>
@@ -50,10 +90,6 @@
   </url>
   <url>
     <loc>https://www.niuiic.top/2020/10/19/vim-tagbar/</loc>
-    <lastmod>2021-03-23</lastmod>
-  </url>
-  <url>
-    <loc>https://www.niuiic.top/2020/08/04/vim-markdown-latex/</loc>
     <lastmod>2021-03-23</lastmod>
   </url>
   <url>
@@ -94,10 +130,6 @@
   </url>
   <url>
     <loc>https://www.niuiic.top/2021/03/23/debug-msp430g2-project-on-linux/</loc>
-    <lastmod>2021-03-23</lastmod>
-  </url>
-  <url>
-    <loc>https://www.niuiic.top/2021/03/23/develop-stm32-project-with-rust/</loc>
     <lastmod>2021-03-23</lastmod>
   </url>
   <url>

@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>niuiic &#39;s blogs</title>
+  <title>niuiic &#39;s Blog</title>
   
-  <subtitle>niuiic&#39;s blogs</subtitle>
+  <subtitle>niuiic&#39;s Blog</subtitle>
   <link href="https://www.niuiic.top/atom.xml" rel="self"/>
   
   <link href="https://www.niuiic.top/"/>
-  <updated>2021-03-23T11:11:18.585Z</updated>
+  <updated>2021-05-15T14:08:02.895Z</updated>
   <id>https://www.niuiic.top/</id>
   
   <author>
@@ -15,6 +15,221 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Create Vue3 Project</title>
+    <link href="https://www.niuiic.top/2021/05/15/create-vue3-project/"/>
+    <id>https://www.niuiic.top/2021/05/15/create-vue3-project/</id>
+    <published>2021-05-15T14:06:13.000Z</published>
+    <updated>2021-05-15T14:08:02.895Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;创建-vue3-项目（vue3-vite-typescript-less）&quot;&gt;&lt;a href=&quot;#创建-vue3-项目（vue3-vite-typescript-less）&quot; class=&quot;headerlink&quot; title=&quot;创建 vue3 项目（vue3 +</summary>
+        
+      
+    
+    
+    
+    <category term="Vue" scheme="https://www.niuiic.top/categories/Vue/"/>
+    
+    
+    <category term="Vue" scheme="https://www.niuiic.top/tags/Vue/"/>
+    
+    <category term="Vite" scheme="https://www.niuiic.top/tags/Vite/"/>
+    
+    <category term="Typescript" scheme="https://www.niuiic.top/tags/Typescript/"/>
+    
+    <category term="Less" scheme="https://www.niuiic.top/tags/Less/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Use Realvnc on Manjaro on rpi4</title>
+    <link href="https://www.niuiic.top/2021/05/15/use-realvnc-on-manjaro-on-rpi4/"/>
+    <id>https://www.niuiic.top/2021/05/15/use-realvnc-on-manjaro-on-rpi4/</id>
+    <published>2021-05-15T13:58:56.000Z</published>
+    <updated>2021-05-15T14:02:27.842Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;在安装-manjaro-系统的树莓派上使用-realvnc&quot;&gt;&lt;a href=&quot;#在安装-manjaro-系统的树莓派上使用-realvnc&quot; class=&quot;headerlink&quot; title=&quot;在安装 manjaro 系统的树莓派上使用</summary>
+        
+      
+    
+    
+    
+    <category term="Raspberry Pi" scheme="https://www.niuiic.top/categories/Raspberry-Pi/"/>
+    
+    
+    <category term="Raspberry Pi" scheme="https://www.niuiic.top/tags/Raspberry-Pi/"/>
+    
+    <category term="Manjaro" scheme="https://www.niuiic.top/tags/Manjaro/"/>
+    
+    <category term="Realvnc" scheme="https://www.niuiic.top/tags/Realvnc/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Install Manjaro on rpi4</title>
+    <link href="https://www.niuiic.top/2021/05/15/install-manjaro-on-rpi4/"/>
+    <id>https://www.niuiic.top/2021/05/15/install-manjaro-on-rpi4/</id>
+    <published>2021-05-15T13:53:05.000Z</published>
+    <updated>2021-05-15T14:02:39.093Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;在树莓派-4-上安装-manjaro&quot;&gt;&lt;a href=&quot;#在树莓派-4-上安装-manjaro&quot; class=&quot;headerlink&quot; title=&quot;在树莓派 4 上安装 manjaro&quot;&gt;&lt;/a&gt;在树莓派 4 上安装</summary>
+        
+      
+    
+    
+    
+    <category term="Raspberry Pi" scheme="https://www.niuiic.top/categories/Raspberry-Pi/"/>
+    
+    
+    <category term="Raspberry Pi" scheme="https://www.niuiic.top/tags/Raspberry-Pi/"/>
+    
+    <category term="Manjaro" scheme="https://www.niuiic.top/tags/Manjaro/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Rust Tauri &quot;Hello World&quot;</title>
+    <link href="https://www.niuiic.top/2021/05/11/rust-tauri-hello-world/"/>
+    <id>https://www.niuiic.top/2021/05/11/rust-tauri-hello-world/</id>
+    <published>2021-05-11T12:14:05.000Z</published>
+    <updated>2021-05-11T14:25:32.263Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;Rust-Tauri-“Hello-World”&quot;&gt;&lt;a href=&quot;#Rust-Tauri-“Hello-World”&quot; class=&quot;headerlink&quot; title=&quot;Rust Tauri “Hello World”&quot;&gt;&lt;/a&gt;Rust Tauri</summary>
+        
+      
+    
+    
+    
+    <category term="Rust" scheme="https://www.niuiic.top/categories/Rust/"/>
+    
+    
+    <category term="Rust" scheme="https://www.niuiic.top/tags/Rust/"/>
+    
+    <category term="Tauri" scheme="https://www.niuiic.top/tags/Tauri/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Better Highlight for Go Files in Vim</title>
+    <link href="https://www.niuiic.top/2021/04/28/better-highlight-for-go-files-in-vim/"/>
+    <id>https://www.niuiic.top/2021/04/28/better-highlight-for-go-files-in-vim/</id>
+    <published>2021-04-28T13:46:41.000Z</published>
+    <updated>2021-04-28T14:13:36.125Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;vim-中更好的-go-语言高亮&quot;&gt;&lt;a href=&quot;#vim-中更好的-go-语言高亮&quot; class=&quot;headerlink&quot; title=&quot;vim 中更好的 go 语言高亮&quot;&gt;&lt;/a&gt;vim 中更好的 go 语言高亮&lt;/h1&gt;&lt;p&gt;本文主要说明如何解决 go</summary>
+        
+      
+    
+    
+    
+    <category term="Vim" scheme="https://www.niuiic.top/categories/Vim/"/>
+    
+    
+    <category term="Vim" scheme="https://www.niuiic.top/tags/Vim/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Better Use of Rust on Gentoo</title>
+    <link href="https://www.niuiic.top/2021/04/24/better-use-of-rust-on-gentoo/"/>
+    <id>https://www.niuiic.top/2021/04/24/better-use-of-rust-on-gentoo/</id>
+    <published>2021-04-24T13:26:57.000Z</published>
+    <updated>2021-04-24T13:47:26.895Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;在-gentoo-上更好地使用-rust&quot;&gt;&lt;a href=&quot;#在-gentoo-上更好地使用-rust&quot; class=&quot;headerlink&quot; title=&quot;在 gentoo 上更好地使用 rust&quot;&gt;&lt;/a&gt;在 gentoo 上更好地使用</summary>
+        
+      
+    
+    
+    
+    <category term="Gentoo" scheme="https://www.niuiic.top/categories/Gentoo/"/>
+    
+    
+    <category term="Gentoo" scheme="https://www.niuiic.top/tags/Gentoo/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Vim File Encoding</title>
+    <link href="https://www.niuiic.top/2021/04/18/vim-file-encoding/"/>
+    <id>https://www.niuiic.top/2021/04/18/vim-file-encoding/</id>
+    <published>2021-04-18T08:10:41.000Z</published>
+    <updated>2021-04-18T08:21:20.464Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;Vim-文件编码&quot;&gt;&lt;a href=&quot;#Vim-文件编码&quot; class=&quot;headerlink&quot; title=&quot;Vim 文件编码&quot;&gt;&lt;/a&gt;Vim 文件编码&lt;/h1&gt;&lt;p&gt;本文主要介绍 vim 文件编码，主要解决中文乱码问题。&lt;/p&gt;
+&lt;h2</summary>
+        
+      
+    
+    
+    
+    <category term="Vim" scheme="https://www.niuiic.top/categories/Vim/"/>
+    
+    
+    <category term="Vim" scheme="https://www.niuiic.top/tags/Vim/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Vim Quickfix</title>
+    <link href="https://www.niuiic.top/2021/04/17/vim-quickfix/"/>
+    <id>https://www.niuiic.top/2021/04/17/vim-quickfix/</id>
+    <published>2021-04-17T13:01:56.000Z</published>
+    <updated>2021-05-10T07:14:26.102Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;Vim-Quickfix&quot;&gt;&lt;a href=&quot;#Vim-Quickfix&quot; class=&quot;headerlink&quot; title=&quot;Vim Quickfix&quot;&gt;&lt;/a&gt;Vim Quickfix&lt;/h1&gt;&lt;p&gt;本文主要介绍 vim quickfix</summary>
+        
+      
+    
+    
+    
+    <category term="Vim" scheme="https://www.niuiic.top/categories/Vim/"/>
+    
+    
+    <category term="Vim" scheme="https://www.niuiic.top/tags/Vim/"/>
+    
+  </entry>
   
   <entry>
     <title>Install rpm/deb Packages on Gentoo</title>
@@ -98,7 +313,7 @@
     <link href="https://www.niuiic.top/2021/03/23/develop-stm32-project-with-rust/"/>
     <id>https://www.niuiic.top/2021/03/23/develop-stm32-project-with-rust/</id>
     <published>2021-03-23T10:19:56.000Z</published>
-    <updated>2021-03-23T11:11:18.575Z</updated>
+    <updated>2021-05-15T14:49:48.749Z</updated>
     
     
       
@@ -111,14 +326,14 @@
     
     
     
+    <category term="MCU" scheme="https://www.niuiic.top/categories/MCU/"/>
+    
     <category term="Rust" scheme="https://www.niuiic.top/categories/Rust/"/>
     
-    <category term="MCU" scheme="https://www.niuiic.top/categories/Rust/MCU/"/>
-    
-    
-    <category term="Stm32" scheme="https://www.niuiic.top/tags/Stm32/"/>
     
     <category term="Rust" scheme="https://www.niuiic.top/tags/Rust/"/>
+    
+    <category term="Stm32" scheme="https://www.niuiic.top/tags/Stm32/"/>
     
   </entry>
   
@@ -326,211 +541,6 @@
     
     
     <category term="Vim" scheme="https://www.niuiic.top/tags/Vim/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Vim Tagbar</title>
-    <link href="https://www.niuiic.top/2020/10/19/vim-tagbar/"/>
-    <id>https://www.niuiic.top/2020/10/19/vim-tagbar/</id>
-    <published>2020-10-19T04:18:02.000Z</published>
-    <updated>2021-03-23T11:11:18.585Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;vim-tagbar&quot;&gt;&lt;a href=&quot;#vim-tagbar&quot; class=&quot;headerlink&quot; title=&quot;vim tagbar&quot;&gt;&lt;/a&gt;vim tagbar&lt;/h1&gt;&lt;p&gt;本文介绍 vim tagbar 插件替代品，获取更好的 tags</summary>
-        
-      
-    
-    
-    
-    <category term="Vim" scheme="https://www.niuiic.top/categories/Vim/"/>
-    
-    
-    <category term="Vim" scheme="https://www.niuiic.top/tags/Vim/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Vim File Tree</title>
-    <link href="https://www.niuiic.top/2020/10/19/vim-file-tree/"/>
-    <id>https://www.niuiic.top/2020/10/19/vim-file-tree/</id>
-    <published>2020-10-19T04:00:04.000Z</published>
-    <updated>2021-03-23T11:11:18.585Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;Vim-文件树&quot;&gt;&lt;a href=&quot;#Vim-文件树&quot; class=&quot;headerlink&quot; title=&quot;Vim 文件树&quot;&gt;&lt;/a&gt;Vim 文件树&lt;/h1&gt;&lt;p&gt;本文介绍 nerdtree 替代品，全新 vim filetree 解决方案。&lt;/p&gt;
-&lt;h2</summary>
-        
-      
-    
-    
-    
-    <category term="Vim" scheme="https://www.niuiic.top/categories/Vim/"/>
-    
-    
-    <category term="Vim" scheme="https://www.niuiic.top/tags/Vim/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Vim Automatic Completion</title>
-    <link href="https://www.niuiic.top/2020/10/19/vim-automatic-completion/"/>
-    <id>https://www.niuiic.top/2020/10/19/vim-automatic-completion/</id>
-    <published>2020-10-19T02:43:22.000Z</published>
-    <updated>2021-03-23T11:11:18.585Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;本文介绍 vim 自动补全方案。主要采用更强大的 coc.nvim 插件来替代 YCM。&lt;/p&gt;
-&lt;h1 id=&quot;vim-自动补全&quot;&gt;&lt;a href=&quot;#vim-自动补全&quot; class=&quot;headerlink&quot; title=&quot;vim 自动补全&quot;&gt;&lt;/a&gt;vim</summary>
-        
-      
-    
-    
-    
-    <category term="Vim" scheme="https://www.niuiic.top/categories/Vim/"/>
-    
-    
-    <category term="Vim" scheme="https://www.niuiic.top/tags/Vim/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Browse and Save Files that Require Root Permissions In Neovim</title>
-    <link href="https://www.niuiic.top/2020/10/18/browse-and-save-files-that-require-root-permissions-in-neovim/"/>
-    <id>https://www.niuiic.top/2020/10/18/browse-and-save-files-that-require-root-permissions-in-neovim/</id>
-    <published>2020-10-18T13:14:07.000Z</published>
-    <updated>2021-03-23T11:11:18.575Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;Neovim浏览及保存需要root权限的文件&quot;&gt;&lt;a href=&quot;#Neovim浏览及保存需要root权限的文件&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="Vim" scheme="https://www.niuiic.top/categories/Vim/"/>
-    
-    
-    <category term="Vim" scheme="https://www.niuiic.top/tags/Vim/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Gentoo System Further Improvement</title>
-    <link href="https://www.niuiic.top/2020/08/08/gentoo-system-further-improvement/"/>
-    <id>https://www.niuiic.top/2020/08/08/gentoo-system-further-improvement/</id>
-    <published>2020-08-08T01:44:38.000Z</published>
-    <updated>2021-03-23T11:11:18.582Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;&lt;a href=&quot;https://www.niuiic.top/2020/08/06/gentoo-tutorials-directory/&quot;&gt;Gentoo 教程目录&lt;/a&gt;&lt;/p&gt;
-&lt;h1 id=&quot;Gentoo-系统完善&quot;&gt;&lt;a href=&quot;#Gentoo-系统完善&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="Gentoo" scheme="https://www.niuiic.top/categories/Gentoo/"/>
-    
-    
-    <category term="Gentoo" scheme="https://www.niuiic.top/tags/Gentoo/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Gentoo Kool Desktop Environment Installation</title>
-    <link href="https://www.niuiic.top/2020/08/08/gentoo-kool-desktop-environment-installation/"/>
-    <id>https://www.niuiic.top/2020/08/08/gentoo-kool-desktop-environment-installation/</id>
-    <published>2020-08-07T16:44:23.000Z</published>
-    <updated>2021-03-23T11:11:18.579Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;&lt;a href=&quot;https://www.niuiic.top/2020/08/06/gentoo-tutorials-directory/&quot;&gt;Gentoo 教程目录&lt;/a&gt;&lt;/p&gt;
-&lt;h1 id=&quot;Gentoo-KDE-桌面安装&quot;&gt;&lt;a</summary>
-        
-      
-    
-    
-    
-    <category term="Gentoo" scheme="https://www.niuiic.top/categories/Gentoo/"/>
-    
-    
-    <category term="Gentoo" scheme="https://www.niuiic.top/tags/Gentoo/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Gentoo Basic System Installation</title>
-    <link href="https://www.niuiic.top/2020/08/07/gentoo-basic-system-installation/"/>
-    <id>https://www.niuiic.top/2020/08/07/gentoo-basic-system-installation/</id>
-    <published>2020-08-07T07:36:38.000Z</published>
-    <updated>2021-03-23T11:11:18.575Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;&lt;a href=&quot;https://www.niuiic.top/2020/08/06/gentoo-tutorials-directory/&quot;&gt;Gentoo 教程目录&lt;/a&gt;&lt;/p&gt;
-&lt;h1 id=&quot;Gentoo-基本系统安装&quot;&gt;&lt;a</summary>
-        
-      
-    
-    
-    
-    <category term="Gentoo" scheme="https://www.niuiic.top/categories/Gentoo/"/>
-    
-    
-    <category term="Gentoo" scheme="https://www.niuiic.top/tags/Gentoo/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Gentoo Tutorials Directory</title>
-    <link href="https://www.niuiic.top/2020/08/06/gentoo-tutorials-directory/"/>
-    <id>https://www.niuiic.top/2020/08/06/gentoo-tutorials-directory/</id>
-    <published>2020-08-06T14:00:09.000Z</published>
-    <updated>2021-03-23T11:11:18.582Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;Gentoo-系列教程目录&quot;&gt;&lt;a href=&quot;#Gentoo-系列教程目录&quot; class=&quot;headerlink&quot; title=&quot;Gentoo 系列教程目录&quot;&gt;&lt;/a&gt;Gentoo 系列教程目录&lt;/h1&gt;&lt;h2 id=&quot;Gentoo-Preface&quot;&gt;&lt;a</summary>
-        
-      
-    
-    
-    
-    <category term="Gentoo" scheme="https://www.niuiic.top/categories/Gentoo/"/>
-    
-    
-    <category term="Gentoo" scheme="https://www.niuiic.top/tags/Gentoo/"/>
     
   </entry>
   
