@@ -16,7 +16,7 @@ categories:
 
 使用 npm 作为包管理器。
 
-> yarn2 的一系列操作让人迷惑，不想折腾了。
+> yarn2 的一系列操作让人迷惑，本来不想折腾了。最后还是忍不住折腾了一把，用法放在最后面。
 
 创建项目
 
@@ -63,3 +63,52 @@ npm install @vuedx/typescript-plugin-vue -D
 1. 不启用任何插件，无论有没有`src/shims-vue.d.ts`文件，vue 文件中`import { defineComponent } from 'vue'`都不报错，`import HelloWorld from './components/HelloWorld.vue'`也不报错。
 2. 只要启用`eslint-plugin-vue`插件，就可以防止 ts 文件中`import { createApp } from 'vue'`出错。但是如果没有`src/shims-vue.d.ts`文件，`import App from './App.vue'`还是会出错。
 3. 继续启用`@vuedx/typescript-plugin-vue`，删掉`src/shims-vue.d.ts`，一切正常。
+
+为了在挂载自定义组件的时候不出错，还需要设置根目录下的`vite.config.ts`如下。
+
+```typescript
+import { defineConfig } from "vite";
+import vue from "@vitejs/plugin-vue";
+
+export default defineConfig({
+  plugins: [vue()],
+  resolve: {
+    alias: { vue: "vue/dist/vue.esm-bundler.js" },
+  },
+});
+```
+
+使用 yarn2 代替 npm。
+
+首先安装 yarn1。
+
+> yarn2 的默认用法是把自己当成依赖安装在项目中。如果在全局安装 yarn2，也需要在项目中才能执行命令。同时 yarn2 无法执行 create 命令，还需要依靠 yarn1。
+
+```sh
+# 在全局安装yarn1
+npm -g install yarn
+# 初始化项目
+yarn create @vitejs/app appName --template vue-ts
+# 升级成yarn2
+cd appName
+yarn set version berry
+```
+
+修改项目根目录下`.yarnrc.yml`。
+
+```yml
+yarnPath: ".yarn/releases/yarn-berry.cjs"
+nodeLinker: node-modules
+npmRegistries: https://registry.npm.taobao.org/
+```
+
+第二行的配置是让 yarn2 完全用 npm 的方式安装依赖。否则是不存在`node_modules`的，也就不能调用插件。虽然这样做丧失了 yarn2 的特性，但是比起 npm 至少速度上可以快点。
+
+继续完成项目初始化。
+
+```sh
+yarn install
+yarn add less -D
+yarn add eslint eslint-plugin-vue -D
+yarn add @vuedx/typescript-plugin-vue -D
+```

@@ -6,7 +6,7 @@
   <link href="https://www.niuiic.top/atom.xml" rel="self"/>
   
   <link href="https://www.niuiic.top/"/>
-  <updated>2021-05-15T14:08:02.895Z</updated>
+  <updated>2021-06-06T08:06:37.654Z</updated>
   <id>https://www.niuiic.top/</id>
   
   <author>
@@ -17,11 +17,156 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Advanced Tutorial of Vue-Vite-Typescript</title>
+    <link href="https://www.niuiic.top/2021/06/06/advanced-tutorial-of-vue-vite-typescript/"/>
+    <id>https://www.niuiic.top/2021/06/06/advanced-tutorial-of-vue-vite-typescript/</id>
+    <published>2021-06-06T08:04:22.000Z</published>
+    <updated>2021-06-06T08:06:37.654Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;Advanced-Tutorial-of-Vue-Vite-Typescript&quot;&gt;&lt;a href=&quot;#Advanced-Tutorial-of-Vue-Vite-Typescript&quot; class=&quot;headerlink&quot; title=&quot;Advanced</summary>
+        
+      
+    
+    
+    
+    <category term="Vue" scheme="https://www.niuiic.top/categories/Vue/"/>
+    
+    
+    <category term="Vue" scheme="https://www.niuiic.top/tags/Vue/"/>
+    
+    <category term="Vite" scheme="https://www.niuiic.top/tags/Vite/"/>
+    
+    <category term="Typescript" scheme="https://www.niuiic.top/tags/Typescript/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Use Custom Snippets in Vim</title>
+    <link href="https://www.niuiic.top/2021/06/05/use-custom-snippets-in-vim/"/>
+    <id>https://www.niuiic.top/2021/06/05/use-custom-snippets-in-vim/</id>
+    <published>2021-06-05T08:18:12.000Z</published>
+    <updated>2021-06-05T14:46:03.605Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;在-vim-中使用自定义-snippets&quot;&gt;&lt;a href=&quot;#在-vim-中使用自定义-snippets&quot; class=&quot;headerlink&quot; title=&quot;在 vim 中使用自定义 snippets&quot;&gt;&lt;/a&gt;在 vim 中使用自定义</summary>
+        
+      
+    
+    
+    
+    <category term="Vim" scheme="https://www.niuiic.top/categories/Vim/"/>
+    
+    
+    <category term="Vim" scheme="https://www.niuiic.top/tags/Vim/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Create Tauri Project with Vue-Typescript-Less-Vite</title>
+    <link href="https://www.niuiic.top/2021/06/04/create-tauri-project-with-vue-typescript-less-vite/"/>
+    <id>https://www.niuiic.top/2021/06/04/create-tauri-project-with-vue-typescript-less-vite/</id>
+    <published>2021-06-04T06:25:54.000Z</published>
+    <updated>2021-06-04T07:05:32.074Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;创建-Tauri-Vue-Typescript-Vite-Less-应用&quot;&gt;&lt;a href=&quot;#创建-Tauri-Vue-Typescript-Vite-Less-应用&quot; class=&quot;headerlink&quot; title=&quot;创建 Tauri + Vue +</summary>
+        
+      
+    
+    
+    
+    <category term="Vue" scheme="https://www.niuiic.top/categories/Vue/"/>
+    
+    <category term="Rust" scheme="https://www.niuiic.top/categories/Rust/"/>
+    
+    
+    <category term="Vue" scheme="https://www.niuiic.top/tags/Vue/"/>
+    
+    <category term="Vite" scheme="https://www.niuiic.top/tags/Vite/"/>
+    
+    <category term="Typescript" scheme="https://www.niuiic.top/tags/Typescript/"/>
+    
+    <category term="Tauri" scheme="https://www.niuiic.top/tags/Tauri/"/>
+    
+    <category term="Less" scheme="https://www.niuiic.top/tags/Less/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Basic Tutorial of Spartan Edge Accelerator Board</title>
+    <link href="https://www.niuiic.top/2021/06/03/spartan-edge-accelerator-board-tutorial/"/>
+    <id>https://www.niuiic.top/2021/06/03/spartan-edge-accelerator-board-tutorial/</id>
+    <published>2021-06-03T08:57:37.000Z</published>
+    <updated>2021-06-03T14:42:05.565Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;Spartan-Edge-Accelerator-Board-入门教程&quot;&gt;&lt;a href=&quot;#Spartan-Edge-Accelerator-Board-入门教程&quot; class=&quot;headerlink&quot; title=&quot;Spartan Edge</summary>
+        
+      
+    
+    
+    
+    <category term="Embedded" scheme="https://www.niuiic.top/categories/Embedded/"/>
+    
+    
+    <category term="FPGA" scheme="https://www.niuiic.top/tags/FPGA/"/>
+    
+    <category term="Arduino" scheme="https://www.niuiic.top/tags/Arduino/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Basic Tutorial of Vue-Vite-Typescript</title>
+    <link href="https://www.niuiic.top/2021/05/17/basic-tutorial-of-vue-vite-typescript/"/>
+    <id>https://www.niuiic.top/2021/05/17/basic-tutorial-of-vue-vite-typescript/</id>
+    <published>2021-05-17T14:08:07.000Z</published>
+    <updated>2021-05-17T14:38:18.993Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;Basic-Tutorial-of-Vue-Vite-Typescript&quot;&gt;&lt;a href=&quot;#Basic-Tutorial-of-Vue-Vite-Typescript&quot; class=&quot;headerlink&quot; title=&quot;Basic Tutorial of</summary>
+        
+      
+    
+    
+    
+    <category term="Vue" scheme="https://www.niuiic.top/categories/Vue/"/>
+    
+    
+    <category term="Vue" scheme="https://www.niuiic.top/tags/Vue/"/>
+    
+    <category term="Vite" scheme="https://www.niuiic.top/tags/Vite/"/>
+    
+    <category term="Typescript" scheme="https://www.niuiic.top/tags/Typescript/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Create Vue3 Project</title>
     <link href="https://www.niuiic.top/2021/05/15/create-vue3-project/"/>
     <id>https://www.niuiic.top/2021/05/15/create-vue3-project/</id>
     <published>2021-05-15T14:06:13.000Z</published>
-    <updated>2021-05-15T14:08:02.895Z</updated>
+    <updated>2021-05-19T11:40:52.113Z</updated>
     
     
       
@@ -124,9 +269,9 @@
     <category term="Rust" scheme="https://www.niuiic.top/categories/Rust/"/>
     
     
-    <category term="Rust" scheme="https://www.niuiic.top/tags/Rust/"/>
-    
     <category term="Tauri" scheme="https://www.niuiic.top/tags/Tauri/"/>
+    
+    <category term="Rust" scheme="https://www.niuiic.top/tags/Rust/"/>
     
   </entry>
   
@@ -261,7 +406,7 @@
     <link href="https://www.niuiic.top/2021/03/23/debug-msp430g2-project-on-linux/"/>
     <id>https://www.niuiic.top/2021/03/23/debug-msp430g2-project-on-linux/</id>
     <published>2021-03-23T10:26:43.000Z</published>
-    <updated>2021-03-23T11:11:18.575Z</updated>
+    <updated>2021-05-31T08:33:54.186Z</updated>
     
     
       
@@ -274,7 +419,7 @@
     
     
     
-    <category term="MCU" scheme="https://www.niuiic.top/categories/MCU/"/>
+    <category term="Embedded" scheme="https://www.niuiic.top/categories/Embedded/"/>
     
     
     <category term="MSP430G2" scheme="https://www.niuiic.top/tags/MSP430G2/"/>
@@ -313,7 +458,7 @@
     <link href="https://www.niuiic.top/2021/03/23/develop-stm32-project-with-rust/"/>
     <id>https://www.niuiic.top/2021/03/23/develop-stm32-project-with-rust/</id>
     <published>2021-03-23T10:19:56.000Z</published>
-    <updated>2021-05-15T14:49:48.749Z</updated>
+    <updated>2021-05-31T08:34:10.063Z</updated>
     
     
       
@@ -326,9 +471,9 @@
     
     
     
-    <category term="MCU" scheme="https://www.niuiic.top/categories/MCU/"/>
-    
     <category term="Rust" scheme="https://www.niuiic.top/categories/Rust/"/>
+    
+    <category term="Embedded" scheme="https://www.niuiic.top/categories/Embedded/"/>
     
     
     <category term="Rust" scheme="https://www.niuiic.top/tags/Rust/"/>
@@ -405,133 +550,6 @@
         
     <summary type="html">&lt;h1 id=&quot;vim剪贴板历史记录插件&quot;&gt;&lt;a href=&quot;#vim剪贴板历史记录插件&quot; class=&quot;headerlink&quot; title=&quot;vim剪贴板历史记录插件&quot;&gt;&lt;/a&gt;vim剪贴板历史记录插件&lt;/h1&gt;&lt;p&gt;本文介绍 vim 剪贴板历史管理插件。&lt;/p&gt;
 &lt;h2</summary>
-        
-      
-    
-    
-    
-    <category term="Vim" scheme="https://www.niuiic.top/categories/Vim/"/>
-    
-    
-    <category term="Vim" scheme="https://www.niuiic.top/tags/Vim/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Vim Markdown Preview Plugin</title>
-    <link href="https://www.niuiic.top/2021/03/23/vim-markdown-preview-plugin/"/>
-    <id>https://www.niuiic.top/2021/03/23/vim-markdown-preview-plugin/</id>
-    <published>2021-03-23T08:44:59.000Z</published>
-    <updated>2021-03-23T11:11:18.585Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;vim-markdown预览插件&quot;&gt;&lt;a href=&quot;#vim-markdown预览插件&quot; class=&quot;headerlink&quot; title=&quot;vim markdown预览插件&quot;&gt;&lt;/a&gt;vim markdown预览插件&lt;/h1&gt;&lt;p&gt;本文主要介绍</summary>
-        
-      
-    
-    
-    
-    <category term="Vim" scheme="https://www.niuiic.top/categories/Vim/"/>
-    
-    
-    <category term="Vim" scheme="https://www.niuiic.top/tags/Vim/"/>
-    
-    <category term="Markdown" scheme="https://www.niuiic.top/tags/Markdown/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Use Vim as the Editor of Systemverilog</title>
-    <link href="https://www.niuiic.top/2021/03/23/use-vim-as-the-editor-of-systemverilog/"/>
-    <id>https://www.niuiic.top/2021/03/23/use-vim-as-the-editor-of-systemverilog/</id>
-    <published>2021-03-23T08:42:41.000Z</published>
-    <updated>2021-03-23T11:11:18.585Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;使用vim作为systemverilog编辑器&quot;&gt;&lt;a href=&quot;#使用vim作为systemverilog编辑器&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="Vim" scheme="https://www.niuiic.top/categories/Vim/"/>
-    
-    
-    <category term="Vim" scheme="https://www.niuiic.top/tags/Vim/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Vim Debugging Scheme</title>
-    <link href="https://www.niuiic.top/2020/10/20/vim-debugging-scheme/"/>
-    <id>https://www.niuiic.top/2020/10/20/vim-debugging-scheme/</id>
-    <published>2020-10-20T02:29:48.000Z</published>
-    <updated>2021-03-23T11:11:18.585Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;vim-调试方案&quot;&gt;&lt;a href=&quot;#vim-调试方案&quot; class=&quot;headerlink&quot; title=&quot;vim 调试方案&quot;&gt;&lt;/a&gt;vim 调试方案&lt;/h1&gt;&lt;p&gt;本文介绍在 vim 中使用 vimspector 插件扩展 IDE</summary>
-        
-      
-    
-    
-    
-    <category term="Vim" scheme="https://www.niuiic.top/categories/Vim/"/>
-    
-    
-    <category term="Vim" scheme="https://www.niuiic.top/tags/Vim/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Vim Shortcut Key Management</title>
-    <link href="https://www.niuiic.top/2020/10/19/vim-shortcut-key-management/"/>
-    <id>https://www.niuiic.top/2020/10/19/vim-shortcut-key-management/</id>
-    <published>2020-10-19T14:01:56.000Z</published>
-    <updated>2021-03-23T11:11:18.585Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;vim-快捷键管理&quot;&gt;&lt;a href=&quot;#vim-快捷键管理&quot; class=&quot;headerlink&quot; title=&quot;vim 快捷键管理&quot;&gt;&lt;/a&gt;vim 快捷键管理&lt;/h1&gt;&lt;p&gt;本文主要介绍如何使用&lt;code&gt;vim-which-key&lt;/code&gt;管理</summary>
-        
-      
-    
-    
-    
-    <category term="Vim" scheme="https://www.niuiic.top/categories/Vim/"/>
-    
-    
-    <category term="Vim" scheme="https://www.niuiic.top/tags/Vim/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Vim Plugin Management</title>
-    <link href="https://www.niuiic.top/2020/10/19/vim-plugin-management/"/>
-    <id>https://www.niuiic.top/2020/10/19/vim-plugin-management/</id>
-    <published>2020-10-19T13:39:32.000Z</published>
-    <updated>2021-03-23T11:11:18.585Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;vim插件管理&quot;&gt;&lt;a href=&quot;#vim插件管理&quot; class=&quot;headerlink&quot;</summary>
         
       
     

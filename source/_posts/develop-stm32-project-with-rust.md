@@ -5,7 +5,7 @@ tags:
     - Rust
     - Stm32
 categories:
-    - [MCU]
+    - [Embedded]
     - [Rust]
 ---
 

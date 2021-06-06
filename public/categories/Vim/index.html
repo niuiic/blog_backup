@@ -337,13 +337,13 @@
                     var typed = new Typed("#subtitle", {
                         strings: [ 
                             
-                                "懒惰是万恶之源。",
+                                "生命不息，折腾不止。",
                             
-                                "Idleness is the root of all evil.",
+                                "Cease to the tossing and cease to the life.",
                             
                         ],
                         startDelay: 300,
-                        typeSpeed: 100,
+                        typeSpeed: 150,
                         loop: true,
                         backSpeed: 50,
                         showCursor: true
@@ -380,11 +380,20 @@
                 
                 
                 
-                <a href="/categories/Vim/" title="Vim: 16">
+                <a href="/categories/Vim/" title="Vim: 17">
                     <span class="chip center-align waves-effect waves-light
                              chip-active "
                             style="background-color: #F9EBEA;">Vim
-                        <span class="tag-length">16</span>
+                        <span class="tag-length">17</span>
+                    </span>
+                </a>
+                
+                
+                <a href="/categories/Vue/" title="Vue: 4">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default "
+                            style="background-color: #F5EEF8;">Vue
+                        <span class="tag-length">4</span>
                     </span>
                 </a>
                 
@@ -392,26 +401,26 @@
                 <a href="/categories/Gentoo/" title="Gentoo: 12">
                     <span class="chip center-align waves-effect waves-light
                              chip-default "
-                            style="background-color: #F5EEF8;">Gentoo
+                            style="background-color: #D5F5E3;">Gentoo
                         <span class="tag-length">12</span>
                     </span>
                 </a>
                 
                 
-                <a href="/categories/Vue/" title="Vue: 1">
+                <a href="/categories/Rust/" title="Rust: 3">
                     <span class="chip center-align waves-effect waves-light
                              chip-default "
-                            style="background-color: #D5F5E3;">Vue
-                        <span class="tag-length">1</span>
+                            style="background-color: #E8F8F5;">Rust
+                        <span class="tag-length">3</span>
                     </span>
                 </a>
                 
                 
-                <a href="/categories/MCU/" title="MCU: 2">
+                <a href="/categories/Embedded/" title="Embedded: 4">
                     <span class="chip center-align waves-effect waves-light
                              chip-default "
-                            style="background-color: #E8F8F5;">MCU
-                        <span class="tag-length">2</span>
+                            style="background-color: #FEF9E7;">Embedded
+                        <span class="tag-length">4</span>
                     </span>
                 </a>
                 
@@ -419,16 +428,7 @@
                 <a href="/categories/Raspberry-Pi/" title="Raspberry Pi: 2">
                     <span class="chip center-align waves-effect waves-light
                              chip-default "
-                            style="background-color: #FEF9E7;">Raspberry Pi
-                        <span class="tag-length">2</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/categories/Rust/" title="Rust: 2">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            style="background-color: #F8F9F9;">Rust
+                            style="background-color: #F8F9F9;">Raspberry Pi
                         <span class="tag-length">2</span>
                     </span>
                 </a>
@@ -444,6 +444,53 @@
 
     <article id="articles" class="container articles">
         <div class="row tags-posts">
+            
+            <div class="article tag-post col s12 m6 l4" data-aos="zoom-in">
+                <div class="card">
+                    <a href="/2021/06/05/use-custom-snippets-in-vim/">
+                        <div class="card-image tag-image">
+                            
+                            
+                            <img src="/medias/featureimages/21.jpg" class="responsive-img" alt="Use Custom Snippets in Vim">
+                            
+                            <span class="card-title">Use Custom Snippets in Vim</span>
+                        </div>
+                    </a>
+                    <div class="card-content article-content">
+                        <div class="summary block-with-text">
+                            
+                                在 vim 中使用自定义 snippets本文介绍如何在 vim 中使用自定义 snippets。本文不详解 snippets 语法。
+插件安装与配置首先，安装coc-snippets插件，该插件依赖coc.nvim。安装好coc.nvim
+                            
+                        </div>
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-06-05
+                            </span>
+                            <span class="publish-author">
+                                
+                                <i class="fas fa-bookmark fa-fw icon-category"></i>
+                                
+                                <a href="/categories/Vim/" class="post-category">
+                                    Vim
+                                </a>
+                                
+                                
+                            </span>
+                        </div>
+                    </div>
+
+                    
+                    <div class="card-action article-tags">
+                        
+                        <a href="/tags/Vim/">
+                            <span class="chip bg-color">Vim</span>
+                        </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
             
             <div class="article tag-post col s12 m6 l4" data-aos="zoom-in">
                 <div class="card">
@@ -749,8 +796,8 @@ markdown 预览vim 没有内置 markdown 预览功能，也
                     <div class="card-content article-content">
                         <div class="summary block-with-text">
                             
-                                使用vim作为systemverilog编辑器本文介绍如何使用 vim 搭建 systemverilog 编辑环境。功能包括自动补全、语法高亮、语法检查、格式化等。
-自动补全与语法检查自动补全功能使用 lsp。本文选用 svls 作为 sy
+                                使用 vim 作为 systemverilog 编辑器本文介绍如何使用 vim 搭建 systemverilog 编辑环境。功能包括自动补全、语法高亮、语法检查、格式化等。
+注意本文内容只是针对 systemverilog 提供最基本编辑体
                             
                         </div>
                         <div class="publish-info">
@@ -763,6 +810,10 @@ markdown 预览vim 没有内置 markdown 预览功能，也
                                 
                                 <a href="/categories/Vim/" class="post-category">
                                     Vim
+                                </a>
+                                
+                                <a href="/categories/Embedded/" class="post-category">
+                                    Embedded
                                 </a>
                                 
                                 
@@ -983,53 +1034,6 @@ vista.vim 介绍vista.vim 插件相比于 tagbar 插件的优势主要在于异�
                 </div>
             </div>
             
-            <div class="article tag-post col s12 m6 l4" data-aos="zoom-in">
-                <div class="card">
-                    <a href="/2020/10/19/vim-file-tree/">
-                        <div class="card-image tag-image">
-                            
-                            
-                            <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="Vim File Tree">
-                            
-                            <span class="card-title">Vim File Tree</span>
-                        </div>
-                    </a>
-                    <div class="card-content article-content">
-                        <div class="summary block-with-text">
-                            
-                                Vim 文件树本文介绍 nerdtree 替代品，全新 vim filetree 解决方案。
-coc-explorercoc-explorer 是一个 coc 插件。运行于 coc.nvim 提供的插件平台上。相比于nerdtree，不说性
-                            
-                        </div>
-                        <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-10-19
-                            </span>
-                            <span class="publish-author">
-                                
-                                <i class="fas fa-bookmark fa-fw icon-category"></i>
-                                
-                                <a href="/categories/Vim/" class="post-category">
-                                    Vim
-                                </a>
-                                
-                                
-                            </span>
-                        </div>
-                    </div>
-
-                    
-                    <div class="card-action article-tags">
-                        
-                        <a href="/tags/Vim/">
-                            <span class="chip bg-color">Vim</span>
-                        </a>
-                        
-                    </div>
-                    
-                </div>
-            </div>
-            
         </div>
     </article>
 </main>
@@ -1076,7 +1080,7 @@ coc-explorercoc-explorer 是一个 coc 插件。运行于 coc.nvim 提供的插�
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">36.6k</span>&nbsp;字
+                class="white-color">46.2k</span>&nbsp;字
             
             
             
