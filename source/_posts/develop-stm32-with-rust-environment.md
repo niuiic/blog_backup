@@ -1,15 +1,18 @@
 ---
-title: Develop Stm32 Project with Rust
+title: Develop Stm32 Project with Rust Environment
 date: 2021-03-23 18:19:56
 tags:
-    - Rust
-    - Stm32
+  - Rust
+  - Stm32
 categories:
-    - [Embedded]
-    - [Rust]
+  - [Embedded]
+  - [Rust]
+  - [Stm32]
 ---
 
-# 使用 rust 开发 stm32
+# 使用 rust 开发 stm32 搭建开发环境
+
+本系列教程全部置于 stm32 专栏。
 
 本文介绍如何用 rust 语言开发 stm32。开发平台为 linux（gentoo）。
 

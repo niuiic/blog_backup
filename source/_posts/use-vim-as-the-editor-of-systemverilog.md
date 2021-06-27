@@ -20,6 +20,12 @@ categories:
 
 ## 自动补全与语法检查
 
+更新：使用 svlangserver 代替 svls。
+
+svlangserver 是一个相当新的 lsp，其优点包括实现了定义跳转功能、使用 verilator 编译器进行语法检查、模块调用时提示模块端口、有自带的 snippets（好像暂时不能用）、格式化文档等。虽然它还存在一定问题，但比起 svls 功能更多，值得期待其后续版本。总的来说 svls 语法检查能力可能更强，其他的比不上 svlangserver，然而语法检查最终还是要靠编译器或者 IDE，所以还是建议使用后者。
+
+### 使用 svls
+
 自动补全功能使用 lsp。本文选用 svls 作为 systemverilog 的语言服务器。
 
 svls 使用 rust 语言编写，需要 rust 语言环境，使用 rust 包管理器 cargo 安装。或者可以从 snap 商店下载。
@@ -53,7 +59,35 @@ linter = true
 
 关于语法检查功能，可以同时使用 ale 插件。该插件可以通过 iverilog 编译器提供错误信息，两者错误信息并不完全重合。
 
-虽然在`svls`的演示视频中存在 snippets 的补全画面，但是经过试用发现这似乎是其他插件提供的。但是`vim-snippets`插件提供的 snippets 非常不全，因此下面介绍简单的自定义 snippets。
+虽然在`svls`的演示视频中存在 snippets 的补全画面，但是经过试用发现这其实是其他插件提供的。由于`vim-snippets`插件提供的 snippets 非常不全，因此之后会介绍简单的自定义 snippets。
+
+### 使用 svlangserver
+
+`npm install -g @imc-trading/svlangserver`
+
+继续安装`verilator`以及[google/verible](https://github.com/google/verible)。
+
+在 coc.nvim 的配置文件中设置如下。下面的路径修改成自己的位置。
+
+```json
+  "languageserver": {
+    "svlangserver": {
+      "module": "/home/niuiic/Applicants/Npm/npm_global/lib64/node_modules/@imc-trading/svlangserver/lib/svlangserver.js",
+      "filetypes": ["systemverilog"],
+      "settings": {
+        "systemverilog.includeIndexing": ["**/*.{sv,svh}"],
+        "systemverilog.excludeIndexing": ["test/**/*.sv*"],
+        "systemverilog.defines": [],
+        "systemverilog.launchConfiguration": "/usr/bin/verilator -sv -Wall --lint-only",
+        "systemverilog.formatCommand": "/home/niuiic/Applicants/Verible/verible/bin/verible-verilog-format"
+      }
+    }
+  }
+```
+
+后续可以使用`:Format`来调用格式化工具。
+
+### 自定义 snippets
 
 首先，需要`coc-snippets`插件，该插件依赖`coc.nvim`。安装好`coc.nvim`之后，只需要使用`:CocInstall coc-snippets`命令即可安装。具体设置可以参考其[github 主页](https://github.com/neoclide/coc-snippets)。安装该插件后需要同步安装`honza/vim-snippets`来提供 snippets。`SirVer/ultisnips`需要拆卸掉，因为该插件会对自定义的 snippets 文件报错。
 
@@ -87,6 +121,8 @@ snippet alw
 
 按照上述例子继续补充自己想要的 snippets 即可。注意标准写法中应当是用`endsnippet`的，不过这插件似乎不需要这个，而且加上这一句之后反而会出现在补全内容中，因此还是不加为好。
 
+此外，可以复制[svlangserver 仓库](https://github.com/imc-trading/svlangserver)中的 snippets 来使用。
+
 除了 snippets，svls 能提供的自动补全功能感觉还是差点意思的。继续使用`coc.nvim`定义自动补全库。
 
 新建目录`～/.config/nvim/autoload/coc/source`。在该目录下新建文件`systemverilog.vim`，文件名原则同上。
@@ -112,6 +148,8 @@ endfunction
 至此，完成自动补全与语法检查功能的配置。
 
 ## 格式化
+
+注意，使用 svlangserver 不需要再额外配置格式化。
 
 systemverilog 的格式化需要[verible](https://github.com/google/verible)的支持。verible 为 google 为 systemverilog 开发的一套工具集，其中包含了格式化工具。
 

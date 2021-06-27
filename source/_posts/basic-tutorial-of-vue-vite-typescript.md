@@ -839,4 +839,4 @@ app.component("save-button", {
 });
 ```
 
-I will continue to make notes on the advanced usage of vue, so please stay tuned.
+Here is the [advanced tutorial](https://www.niuiic.top/2021/06/06/advanced-tutorial-of-vue-vite-typescript/).

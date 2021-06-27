@@ -1,8 +1,51 @@
-[{
-    "avatar": "https://draveness.me/images/draven-logo.png",
-    "name": "真没什么逻辑",
-    "introduction": "面向信仰编程",
-    "url": "https://draveness.me/",
+[
+  {
+    "avatar": "https://rtic.rs/0.5/book/en/RTIC.svg",
+    "name": "Rust RTIC",
+    "introduction": "Rust嵌入式并发中断驱动库",
+    "url": "https://rtic.rs/0.5/book/en/",
     "title": "前去学习"
-}]
-
+  },
+  {
+    "avatar": "https://v3.vuejs.org/logo.png",
+    "name": "Vue3 FrameWork",
+    "introduction": "Vue3 框架",
+    "url": "https://v3.vuejs.org/guide/installation.html",
+    "title": "前去学习"
+  },
+  {
+    "avatar": "https://tauri.studio/en/img/tauri.png",
+    "name": "Tauri",
+    "introduction": "替代electron的SPA框架",
+    "url": "https://tauri.studio/en/docs/getting-started/intro/",
+    "title": "前去学习"
+  },
+  {
+    "avatar": "https://d33wubrfki0l68.cloudfront.net/a8b30e56e49a257f977e52e05cd27e72f4d8cde7/5a25d/assets/img/tock.svg",
+    "name": "Tock OS",
+    "introduction": "Rust嵌入式多任务实时操作系统",
+    "url": "https://www.tockos.org/",
+    "title": "前去学习"
+  },
+  {
+    "avatar": "https://www.rust-lang.org/static/images/rust-logo-blk.svg",
+    "name": "Rust Macros",
+    "introduction": "Rust宏教程",
+    "url": "https://veykril.github.io/tlborm/",
+    "title": "前去学习"
+  },
+  {
+    "avatar": "https://www.rust-lang.org/static/images/rust-logo-blk.svg",
+    "name": "Rust Forum",
+    "introduction": "Rust论坛",
+    "url": "https://users.rust-lang.org/",
+    "title": "前去学习"
+  },
+  {
+    "avatar": "https://tokio.rs/img/tokio-horizontal.svg",
+    "name": "Rust Tokio",
+    "introduction": "Rust异步库",
+    "url": "https://tokio.rs/",
+    "title": "前去学习"
+  }
+]

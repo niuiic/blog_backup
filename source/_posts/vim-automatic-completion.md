@@ -96,7 +96,7 @@ endfunction
 :syn enable
 ```
 
-可以设置进入Vim时自动执行该命令，设置如下。
+可以设置进入 Vim 时自动执行该命令，设置如下。
 
 ```vim
 au VimEnter * :syn off<CR>
@@ -105,7 +105,46 @@ au VimEnter * :syn enable<CR>
 
 ## 其他功能
 
-coc.nvim 提供的其他功能还有很多，包括定义跳转、文档查询等等。感兴趣的可以自行研究。以下附上我的 coc.nvim 配置。仅供参考。其中`vim-which-key`的部分如果没有安装该插件就不必配置。
+coc.nvim 提供的其他功能还有很多，包括定义跳转、文档查询等等，下面介绍几个很重要的功能，其他的可以自行研究。
+
+预览窗口翻页，配置如下。
+
+```vim
+" scroll preview window
+if has('nvim-0.4.0') || has('patch-8.2.0750')
+    nnoremap <silent><nowait><expr> <C-]> coc#float#has_scroll() ? coc#float#scroll(1) : "\<C-]>"
+    nnoremap <silent><nowait><expr> <C-[> coc#float#has_scroll() ? coc#float#scroll(0) : "\<C-[>"
+    inoremap <silent><nowait><expr> <C-]> coc#float#has_scroll() ? "\<c-r>=coc#float#scroll(1)\<cr>" : "\<Right>"
+    inoremap <silent><nowait><expr> <C-[> coc#float#has_scroll() ? "\<c-r>=coc#float#scroll(0)\<cr>" : "\<Left>"
+    vnoremap <silent><nowait><expr> <C-]> coc#float#has_scroll() ? coc#float#scroll(1) : "\<C-]>"
+    vnoremap <silent><nowait><expr> <C-[> coc#float#has_scroll() ? coc#float#scroll(0) : "\<C-[>"
+endif
+```
+
+跳转到定义等，配置如下。
+
+```vim
+nmap <silent><nowait> <space>gy <Plug>(coc-type-definition)
+nmap <silent><nowait> <space>gi <Plug>(coc-implementation)
+nmap <silent><nowait> <space>gr <Plug>(coc-references)
+nmap <silent><nowait> <space>gd <Plug>(coc-definition)
+```
+
+变量、函数等重命名，配置如下。
+
+```vim
+nmap <silent><nowait> <space>cr <Plug>(coc-rename)
+```
+
+跳转到错误或者警告，配置如下。
+
+```vim
+" jump to the next or previous error
+nmap <silent> ck <Plug>(coc-diagnostic-prev)
+nmap <silent> cj <Plug>(coc-diagnostic-next)
+```
+
+以下附上我的 coc.nvim 配置。仅供参考。其中`vim-which-key`的部分如果没有安装该插件就不必配置。
 
 ```vim
 " coc.nvim
@@ -130,43 +169,54 @@ set updatetime=300
 " Don't pass messages to |ins-completion-menu|.
 set shortmess+=c
 
+" scroll preview window
+if has('nvim-0.4.0') || has('patch-8.2.0750')
+    nnoremap <silent><nowait><expr> <C-]> coc#float#has_scroll() ? coc#float#scroll(1) : "\<C-]>"
+    nnoremap <silent><nowait><expr> <C-[> coc#float#has_scroll() ? coc#float#scroll(0) : "\<C-[>"
+    inoremap <silent><nowait><expr> <C-]> coc#float#has_scroll() ? "\<c-r>=coc#float#scroll(1)\<cr>" : "\<Right>"
+    inoremap <silent><nowait><expr> <C-[> coc#float#has_scroll() ? "\<c-r>=coc#float#scroll(0)\<cr>" : "\<Left>"
+    vnoremap <silent><nowait><expr> <C-]> coc#float#has_scroll() ? coc#float#scroll(1) : "\<C-]>"
+    vnoremap <silent><nowait><expr> <C-[> coc#float#has_scroll() ? coc#float#scroll(0) : "\<C-[>"
+endif
+
+
 " Always show the signcolumn, otherwise it would shift the text each time
 " diagnostics appear/become resolved.
 if has("patch-8.1.1564")
-	" Recently vim can merge signcolumn and number column into one
-	set signcolumn=number
+    Recently vim can merge signcolumn and number column into one
+    set signcolumn=number
 else
-	set signcolumn=yes
+    set signcolumn=yes
 endif
 
 " Use tab for trigger completion with characters ahead and navigate.
 " NOTE: Use command ':verbose imap <tab>' to make sure tab is not mapped by
 " other plugin before putting this into your config.
 inoremap <silent><expr> <TAB>
-			\ pumvisible() ? "\<C-n>" :
-			\ <SID>check_back_space() ? "\<TAB>" :
-			\ coc#refresh()
+    \ pumvisible() ? "\<C-n>" :
+    \ <SID>check_back_space() ? "\<TAB>" :
+    \ coc#refresh()
 inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
 
 function! s:check_back_space() abort
-	let col = col('.') - 1
-	return !col || getline('.')[col - 1]  =~# '\s'
+    let col = col('.') - 1
+    return !col || getline('.')[col - 1]  =~# '\s'
 endfunction
 
 " Use <c-space> to trigger completion.
 if has('nvim')
-	inoremap <silent><expr> <c-space> coc#refresh()
+    inoremap <silent><expr> <c-space> coc#refresh()
 else
-	inoremap <silent><expr> <c-@> coc#refresh()
+    inoremap <silent><expr> <c-@> coc#refresh()
 endif
 
 " Use <cr> to confirm completion, `<C-g>u` means break undo chain at current
 " position. Coc only does snippet and additional edit on confirm.
 " <cr> could be remapped by other vim plugin, try `:verbose imap <CR>`.
 if exists('*complete_info')
-	inoremap <expr> <cr> complete_info()["selected"] != "-1" ? "\<C-y>" : "\<C-g>u\<CR>"
+    inoremap <expr> <cr> complete_info()["selected"] != "-1" ? "\<C-y>" : "\<C-g>u\<CR>"
 else
-	inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
+    inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
 endif
 
 " GoTo code navigation.
@@ -176,22 +226,22 @@ nmap <silent><nowait> <space>gr <Plug>(coc-references)
 nmap <silent><nowait> <space>gd <Plug>(coc-definition)
 
 let g:which_key_map1.g = {
-			\ 'name': '+coc.goto',
-			\ 'y' : 'go to type definition',
-			\ 'i' : 'go to implementation',
-			\ 'r' : 'go to references',
-			\ 'd' : 'go to definition',
-			\ }
+    \ 'name': '+coc.goto',
+    \ 'y' : 'go to type definition',
+    \ 'i' : 'go to implementation',
+    \ 'r' : 'go to references',
+    \ 'd' : 'go to definition',
+    \ }
 
 " Use K to show documentation in preview window.
 nnoremap <silent> K :call <SID>show_documentation()<CR>
 
 function! s:show_documentation()
-	if (index(['vim','help'], &filetype) >= 0)
-		execute 'h '.expand('<cword>')
-	else
-		call CocActionAsync('doHover')
-	endif
+    if (index(['vim','help'], &filetype) >= 0)
+        execute 'h '.expand('<cword>')
+    else
+        call CocActionAsync('doHover')
+    endif
 endfunction
 
 " Highlight the symbol and its references when holding the cursor.
@@ -205,18 +255,18 @@ nmap <silent><nowait> <space>cm <Plug>(coc-format-selected)
 xmap <silent><nowait> <space>cm <Plug>(coc-format-selected)
 
 let g:which_key_map1.c = {
-			\ 'name' : '+coc',
-			\ 'f' : 'automatically fix errors in current line',
-			\ 'm' : 'format selected code',
-			\ 'r' : 'rename symbol',
-			\ }
+    \ 'name' : '+coc',
+    \ 'f' : 'automatically fix errors in current line',
+    \ 'm' : 'format selected code',
+    \ 'r' : 'rename symbol',
+    \ }
 
 augroup mygroup
-	autocmd!
-	" Setup formatexpr specified filetype(s).
-	autocmd FileType typescript,json setl formatexpr=CocAction('formatSelected')
-	" Update signature help on jump placeholder.
-	autocmd User CocJumpPlaceholder call CocActionAsync('showSignatureHelp')
+    autocmd!
+    " Setup formatexpr specified filetype(s).
+    autocmd FileType typescript,json setl formatexpr=CocAction('formatSelected')
+    " Update signature help on jump placeholder.
+    autocmd User CocJumpPlaceholder call CocActionAsync('showSignatureHelp')
 augroup end
 
 " Apply AutoFix to problem on the current line.
@@ -235,6 +285,10 @@ command! -nargs=0 OR   :call     CocAction('runCommand', 'editor.action.organize
 " NOTE: Please see `:h coc-status` for integrations with external plugins that
 " provide custom statusline: lightline.vim, vim-airline.
 set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}
+
+" jump to the next or previous error
+nmap <silent> ck <Plug>(coc-diagnostic-prev)
+nmap <silent> cj <Plug>(coc-diagnostic-next)
 
 " Mappings for CoCList
 " open CocList
@@ -257,15 +311,15 @@ nnoremap <silent><nowait> <leader>cz  :<C-u>CocPrev<CR>
 nnoremap <silent><nowait> <leader>cp  :<C-u>CocListResume<CR>
 
 let g:which_key_map2.c = {
-			\ 'name' : '+coc',
-			\ 't' : 'open coc list',
-			\ 'a' : 'show all diagnostics',
-			\ 'e' : 'manage extensions',
-			\ 'c' : 'show commands',
-			\ 'o' : 'find symbol of current document',
-			\ 's' : 'search workspace symbols',
-			\ 'j' : 'do default action for next item',
-			\ 'z' : 'do default action for previous item',
-			\ 'p' : 'resume latest coc list',
-			\ }
+    \ 'name' : '+coc',
+    \ 't' : 'open coc list',
+    \ 'a' : 'show all diagnostics',
+    \ 'e' : 'manage extensions',
+    \ 'c' : 'show commands',
+    \ 'o' : 'find symbol of current document',
+    \ 's' : 'search workspace symbols',
+    \ 'j' : 'do default action for next item',
+    \ 'z' : 'do default action for previous item',
+    \ 'p' : 'resume latest coc list',
+    \ }
 ```

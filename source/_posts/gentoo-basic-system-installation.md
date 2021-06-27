@@ -142,7 +142,7 @@ PKGDIR="/var/cache/binpkgs"
 
 LC_MESSAGES=C
 
-MAKEOPTS="-j9"
+MAKEOPTS="-j8"
 
 GENTOO_MIRRORS="https://mirrors.tuna.tsinghua.edu.cn/gentoo"
 
@@ -181,7 +181,7 @@ KEYWORDS="amd64"
 
 `KEYWORDS`：不要在这里开启测试分支。
 
-`MAKEOPTS`：建议等于 CPU 线程数+1。这样计算机在编译软件时尚有余力编译另外的软件或者进行其他操作。
+`MAKEOPTS`：建议等于 CPU 线程数。这样计算机在编译软件时尚有余力编译另外的软件或者进行其他操作。
 
 ## 进一步配置
 
